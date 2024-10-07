@@ -9,7 +9,6 @@ const Home = () => {
     ];
 
     const techStack = [
-        // Add your tech stack items here
         'React',
         'Node.js',
         'Spring',
