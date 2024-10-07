@@ -106,7 +106,37 @@ const Home = () => {
             </div>
 
 
-        </>
+           {/* ----------
+            <div className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                <h1 className="text-8xl font-bold flex">
+                    <span>O</span>
+                    <span>R</span>
+                    <span>C</span>
+                    <span>A</span>
+                </h1>
+
+                <p className="text-lg md:text-xl lg:text-2xl">Building Digital Solutions for the Future.</p>
+
+                <div className="flex space-x-4">
+                    <button className="px-6 py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200">
+                        Start Your Project
+                    </button>
+                    <button className="px-6 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
+                        Explore Our Services
+                        <span className="ml-2">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>  <h1 className="text-8xl font-bold flex space-x-80">
+        <span>O</span>
+        <span>R</span>
+        <span>C</span>
+        <span>A</span>
+    </h1> the responsive to fit every device use only*/}
+
+
+
+    </>
 
     )
         ;
