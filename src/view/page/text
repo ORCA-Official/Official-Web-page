@@ -27,42 +27,24 @@ const Home = () => {
     useEffect(() => {
         const tl = gsap.timeline();
 
-        gsap.set(".O", { x: 0, opacity: 0 });  // Center position
-        gsap.set(".A", { x: 0, opacity: 0 });  // Center position
-
-
-        const smallScreen = window.innerWidth < 768;
-        const mediumScreen = window.innerWidth >= 768 && window.innerWidth < 1920;
-        const largeScreen = window.innerWidth >= 1920;
-
-        let moveDistance;
-
-        if (smallScreen) {
-            moveDistance = 100;
-        } else if (mediumScreen) {
-            moveDistance = 350;
-        } else if (largeScreen) {
-            moveDistance = 250;
-        }
-
-        tl.to(".O", { x: -moveDistance, opacity: 1, duration: 2 });
-        tl.to(".A", { x: moveDistance, opacity: 1, duration: 2 }, "-=2");
+        tl.fromTo(".O",
+            { x: -200, opacity: 0 },
+            { x: 0, opacity: 1, duration: 2 }
+        );
+        tl.fromTo(".A",
+            { x: 200, opacity: 0 },
+            { x: 0, opacity: 1, duration: 2 }, "-=1"
+        );
 
         tl.fromTo(".R",
-            { x: 0, scale: 0, opacity: 0 },
-            { x: -moveDistance / 2, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 5, ease: "bounce.out" }, "+=0.5"
         );
         tl.fromTo(".C",
-            { x: 0, scale: 0, opacity: 0 },
-            { x: moveDistance / 2, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { scale: 0, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 5, ease: "bounce.out" }, "-=0.8"
         );
     }, []);
-
-
-
-
-
-
     return (
         <>
             <div className="relative h-screen w-full bg-black">
@@ -74,9 +56,8 @@ const Home = () => {
                     />
                 </div>
 
-                <div
-                    className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
-                    <h1 className="flex justify-center text-4xl sm:text-6xl md:text-8xl font-bold">
+                <div className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                    <h1 className="flex justify-center text-4xl sm:text-6xl md:text-8xl font-bold space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-80">
                         <span className="letter O">O</span>
                         <span className="letter R">R</span>
                         <span className="letter C">C</span>
@@ -98,8 +79,6 @@ const Home = () => {
                         </button>
                     </div>
                 </div>
-
-
             </div>
 
             <div
