@@ -3,7 +3,7 @@ import images from "../../images/aboutBG.png";
 const About = () => {
     return(
         <>
-        <div className="relative h-screen w-full bg-black">
+        {/*<div className="relative h-screen w-full bg-black">
             <div className="absolute inset-0">
                 <img
                     src={images}
@@ -24,8 +24,31 @@ const About = () => {
                 </div>
 
             </div>
-        </div>
+        </div>*/}
 
+            <div className="min-h-screen flex flex-col items-center justify-center relative">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                    <img
+                        src={images}
+                        alt="Background Image"
+                        className="w-full h-full object-cover opacity-100"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-6 flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                    <h1 className="text-9xl font-extrabold opacity-15">
+                        WHO WE ARE
+                    </h1>
+                </div>
+
+                <div className="absolute flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                    <h2 className="text-4xl font-extrabold">
+                        ABOUT US
+                    </h2>
+                </div>
+            </div>
 
         </>
     )
