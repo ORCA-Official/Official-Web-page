@@ -2,8 +2,10 @@ import React, {useEffect} from 'react';
 import images from "../../images/image.png"
 import Service from "./Service";
 import { gsap } from 'gsap';
+import videoUrl from "../../images/bg.mp4";
 
 const Home = () => {
+    //const videoUrl = 'https://drive.google.com/file/d/13XXRir_Jdlvjkc4GKfh3Zk1Lacaj-o6S/preview';
     /*useEffect(() => {
         gsap.set('.letter', { opacity: 0 });
 
@@ -50,11 +52,11 @@ const Home = () => {
 
         tl.fromTo(".R",
             { x: 0, scale: 0, opacity: 0 },
-            { x: -moveDistance / 2, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { x: -moveDistance / 2.5, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
         );
         tl.fromTo(".C",
             { x: 0, scale: 0, opacity: 0 },
-            { x: moveDistance / 2, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { x: moveDistance / 2.5, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
         );
     }, []);
 
@@ -67,11 +69,28 @@ const Home = () => {
         <>
             <div className="relative h-screen w-full bg-black">
                 <div className="absolute inset-0">
-                    <img
+                    {/* <img
                         src={images}
                         alt="Background Image"
                         className="w-full h-full object-cover opacity-50"
-                    />
+                    />*/}
+                    {/*<iframe
+                        src="https://drive.google.com/file/d/13XXRir_Jdlvjkc4GKfh3Zk1Lacaj-o6S/preview?autoplay=1&mute=1"
+                        className="w-full h-full"
+                        allow="autoplay; encrypted-media"
+                        frameBorder="0"
+                        allowFullScreen>
+                    </iframe>*/}
+                    <video
+                        src={videoUrl}
+                        title="Video"
+                        className="w-full object-cover h-full"
+                        autoPlay
+                        muted
+                        loop
+                        controls
+                    ></video>
+
                 </div>
 
                 <div
@@ -106,8 +125,8 @@ const Home = () => {
                 className="container mx-auto px-4 sm:px-8 lg:px-16 py-12 flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
                 {/* Left Section - Number and Text */}
                 <div className="lg:w-1/2 space-y-4">
-                    <h1 className="text-6xl font-bold text-gray-300">/1.</h1>
-                    <p className="text-md md:text-lg text-gray-700">
+                    <h1 className="text-6xl font-bold text-gray-300 font-kumar">/1.</h1>
+                    <p className="text-md md:text-lg text-gray-700 font-poppins">
                         At Orca Tech Solutions, we specialize in creating innovative software solutions tailored to meet
                         the unique needs of businesses. With a focus on excellence, collaboration, and cutting-edge
                         technology, we help companies streamline operations, improve efficiency, and stay ahead in the
@@ -117,7 +136,7 @@ const Home = () => {
 
                 {/* Right Section - ABOUT US with Image */}
                 <div className="lg:w-1/3 flex flex-col space-y-4 items-end">
-                    <h2 className="text-3xl font-bold text-right pt-2 mb-4">ABOUT US</h2>
+                    <h2 className="text-3xl font-bold text-right pt-2 mb-4 font-montserrat">ABOUT US</h2>
                     <img
                         src={images}
                         alt="About Us"
