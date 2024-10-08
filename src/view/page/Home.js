@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import images from "../../images/image.png"
 import Service from "./Service";
 import { gsap } from 'gsap';
-import videoUrl from "../../images/bg.mp4";
+/*import videoUrl from "../../images/bg.mp4";*/
 
 const Home = () => {
     //const videoUrl = 'https://drive.google.com/file/d/13XXRir_Jdlvjkc4GKfh3Zk1Lacaj-o6S/preview';
@@ -69,11 +69,11 @@ const Home = () => {
         <>
             <div className="relative h-screen w-full bg-black">
                 <div className="absolute inset-0">
-                    {/* <img
+                     <img
                         src={images}
                         alt="Background Image"
                         className="w-full h-full object-cover opacity-50"
-                    />*/}
+                    />
                     {/*<iframe
                         src="https://drive.google.com/file/d/13XXRir_Jdlvjkc4GKfh3Zk1Lacaj-o6S/preview?autoplay=1&mute=1"
                         className="w-full h-full"
@@ -81,7 +81,7 @@ const Home = () => {
                         frameBorder="0"
                         allowFullScreen>
                     </iframe>*/}
-                    <video
+                    {/*<video
                         src={videoUrl}
                         title="Video"
                         className="w-full object-cover h-full"
@@ -89,7 +89,7 @@ const Home = () => {
                         muted
                         loop
                         controls
-                    ></video>
+                    ></video>*/}
 
                 </div>
 
