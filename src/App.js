@@ -1,11 +1,11 @@
-
 import './App.css';
-import Home from "./view/page/Home";
+import Project from "./view/project/Project";
+
 
 function App() {
   return (
      <>
-       <Home/>
+       <Project/>
      </>
   );
 }
