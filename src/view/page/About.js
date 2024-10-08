@@ -50,6 +50,23 @@ const About = () => {
                 </div>
             </div>
 
+            <div>
+                <div className="min-h-screen flex flex-col items-center justify-center relative bg-white">
+                    {/* Content */}
+                    <div className="relative z-6 flex flex-col items-center justify-center h-full text-center text-gray-600 space-y-4">
+                        <h1 className="text-9xl font-extrabold opacity-15">
+                            WHAT WE DO
+                        </h1>
+                    </div>
+
+                    <div className="absolute flex flex-col items-center justify-center h-full text-center text-black space-y-4">
+                        <h2 className="text-4xl font-extrabold">
+                            OUR SERVICES
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
         </>
     )
 }
