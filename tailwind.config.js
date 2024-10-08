@@ -8,6 +8,7 @@ module.exports = {
 
       fontFamily:{
         kumar: ['"Kumar One"', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       }
     },
   },

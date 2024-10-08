@@ -33,7 +33,7 @@ const Project = () => {
                 <div className="container mx-auto px-4 sm:px-8 py-16">
 
                     {/* Project Title */}
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-6">CAR RENTAL SYSTEM</h1>
+                    <h1 className="text-4xl font-bold mb-6 font-montserrat tracking-[0.2em]">CAR RENTAL SYSTEM</h1>
 
                     {/* Technology Stack */}
                     <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
