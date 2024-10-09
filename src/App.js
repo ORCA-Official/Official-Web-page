@@ -42,7 +42,7 @@ function App() {
                 effects: true,
             });
 
-            // Create the effect where second section comes in place of the first
+            // Create the effect where second section comes in place of the first update
             gsap.fromTo(".box-b", {
                 y: '100%',  // Start off the screen at the bottom
                 opacity: 0, // Start invisible
