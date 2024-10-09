@@ -32,7 +32,7 @@ const Service = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
-        cssEase: "after",
+        cssEase: "linear",
         responsive: [
             {
                 breakpoint: 1024,
