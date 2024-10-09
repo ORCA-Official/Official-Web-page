@@ -23,7 +23,7 @@ const Service = () => {
         'Firebase',
     ];
 
-    // Carousel settings
+    // Carousel settings.
     const settings = {
         dots: false,
         infinite: true,
