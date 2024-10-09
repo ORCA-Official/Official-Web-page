@@ -24,6 +24,7 @@ import Home from "./view/page/Home";
 import Service from "./view/page/Service";
 import About from "./view/page/About";
 import './assets/css/scroller.css';
+import Project from "./view/page/Project";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -87,6 +88,24 @@ function App() {
                 }
             });
 
+            // Create the effect where Fourth section comes in place of the third
+            gsap.fromTo(".box-d", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-d',
+                    start: 'top top',      // Start when .box-c reaches the top
+                    end: '+=100%',         // Continue for the height of the section
+                    scrub: true,           // Smooth transition
+                    pin: true,             // Pin this section during the transition
+                    anticipatePin: 1,      // Anticipate the pinning for smoothness
+                }
+            });
+
+
         },
         { scope: main }
     );
@@ -95,13 +114,16 @@ function App() {
         <div id="smooth-wrapper" ref={main}>
             <div id="smooth-content">
                 <div className="box box-a gradient-blue" data-speed="0.5">
-                    <Home />
+                    <Home/>
                 </div>
                 <div className="box box-b gradient-orange" data-speed="0.8">
-                    <About />
+                    <About/>
                 </div>
                 <div className="box box-c gradient-purple" data-speed="0.8">
-                    <Service />
+                    <Service/>
+                </div>
+                <div className="box box-d gradient-purple" data-speed="0.8">
+                    <Project/>
                 </div>
                 <div className="line"></div>
             </div>
