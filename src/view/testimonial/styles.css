@@ -1,0 +1,10 @@
+/* General styles for the slider container */
+.slider-container .slick-center .testimonial-card {
+    transform: scale(1.1) translateY(-20px); /* Enlarge and lift the center card */
+    transition: all 0.5s ease; /* Smooth animation */
+}
+
+.slider-container .testimonial-card {
+    transform: scale(1) translateY(0); /* Default scale and position for non-center cards */
+    transition: all 0.5s ease; /* Smooth animation */
+}
