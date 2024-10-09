@@ -38,11 +38,11 @@ function App() {
             smoother.current = ScrollSmoother.create({
                 wrapper: '#smooth-wrapper',
                 content: '#smooth-content',
-                smooth: 2,
+                smooth: 10,
                 effects: true,
             });
 
-            // Create the effect where second section comes in place of the first
+            // Create the effect where second section comes in place of the first update
             gsap.fromTo(".box-b", {
                 y: '100%',  // Start off the screen at the bottom
                 opacity: 0, // Start invisible
@@ -75,6 +75,7 @@ function App() {
             gsap.fromTo(".box-c", {
                 y: '100%',  // Start off the screen at the bottom
                 opacity: 1, // Start invisible
+
             }, {
                 y: '0%',    // Move to its normal position
                 opacity: 1, // Fade in

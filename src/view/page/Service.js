@@ -23,16 +23,17 @@ const Service = () => {
         'Firebase',
     ];
 
-    // Carousel settings.
+    // Carousel settings
     const settings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 1000,
-        slidesToShow: 7,
-        slidesToScroll:1,
+        slidesToShow: 4, // Adjust this number based on your design needs
+        slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 0.1,
-        cssEase: "ease",
+        autoplaySpeed: 1,
+        cssEase: "linear",
+
         responsive: [
             {
                 breakpoint: 1024,
@@ -90,7 +91,7 @@ const Service = () => {
                     <Slider {...settings}>
                         {techStack?.map((tech, index) => (
                             <div className={'p-2 px-2'}>
-                                <div className={'w-full bg-amber-200 text-center py-4 text-2xl'}>
+                                <div className={'w-full bg-amber-200 rounded-full text-center py-4 text-2xl'}>
                                     {tech}
                                 </div>
                             </div>
