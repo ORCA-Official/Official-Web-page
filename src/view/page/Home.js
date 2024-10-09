@@ -50,7 +50,7 @@ const Home = () => {
                     {/* <img
                         src={images}
                         alt="Background Image"
-                        className="w-full h-full object-cover opacity-50"
+                        className="w-full h-full object-cover opacity-50".
                     />*/}
                     <video
                         src={videoUrl}
