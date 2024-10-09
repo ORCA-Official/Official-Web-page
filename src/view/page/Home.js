@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import images from "../../assets/images/image.png";
+/*import images from "../../assets/images/image.png";*/
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import videoUrl from "../../assets/video/bg.mp4";
