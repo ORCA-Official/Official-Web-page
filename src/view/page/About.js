@@ -7,7 +7,7 @@ const About = () => {
             {/*----------------------------- Page 1 -----------------------------*/}
             <div className="min-h-screen flex flex-col items-center justify-center relative">
                 {/* Background Image */}
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 z-10">
                     <img
                         src={images}
                         alt="Background Image"
@@ -16,13 +16,13 @@ const About = () => {
                 </div>
 
                 {/* Content */}
-                <div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                <div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4 z-50">
                     <h1 className="text-9xl font-extrabold opacity-15">
                         WHO WE ARE
                     </h1>
                 </div>
 
-                <div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                <div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4 z-50">
                     <h2 className="text-4xl font-extrabold">
                         ABOUT US
                     </h2>
@@ -31,14 +31,14 @@ const About = () => {
                 {/* Paragraph - Company description */}
 
                 <div className="mt-60">
-                    <p className="text-lg md:text-xl font-light text-gray-300 text-center max-w-4xl relative z-10">
+                    <p className="text-lg md:text-xl font-light text-gray-300 max-w-4xl relative z-10">
                         At Orca Tech Solutions, we are passionate about leveraging the power of technology to drive
                         innovation and solve complex business challenges. With a team of skilled software engineers,
                         we specialize in delivering tailored digital solutions that empower businesses to thrive in a
                         rapidly evolving digital landscape.
                     </p>
 
-                    <p className="text-lg md:text-xl font-light text-gray-300 text-center max-w-4xl relative z-10">
+                    <p className="text-lg md:text-xl font-light text-gray-300 max-w-4xl relative z-10">
                         Founded on the principles of excellence, creativity, and collaboration, we pride ourselves on
                         our ability to transform ideas into reality. Whether it's custom software development, cloud
                         solutions, or mobile app development, we work closely with our clients to ensure that every
@@ -47,11 +47,13 @@ const About = () => {
                 </div>
 
                 {/* Start Your Project Button */}
-                <div className="absolute mb-6">
+                <div className="z-50">
                     <button className="px-6 py-3 text-lg font-semibold text-white bg-transparent border border-white rounded hover:bg-white hover:text-gray-900 transition duration-300">
                         Start Your Project
                     </button>
                 </div>
+
+                {/*px-6 py-3 text-lg font-semibold text-white bg-transparent border border-white rounded hover:bg-white hover:text-gray-900 transition duration-300*/}
 
             </div>
 
