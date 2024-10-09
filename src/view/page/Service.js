@@ -25,14 +25,14 @@ const Service = () => {
 
     // Carousel settings
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 4, // Adjust this number based on your design needs
-        slidesToScroll: 1,
+        slidesToShow: 7, // Adjust this number based on your design needs
+        slidesToScroll: 0.1,
         autoplay: true,
         autoplaySpeed: 1,
-        cssEase: "linear",
+        cssEase: "ease",
 
         responsive: [
             {
