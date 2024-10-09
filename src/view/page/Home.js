@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import images from "../../assets/images/image.png";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import videoUrl from "../../assets/video/bg.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,14 +47,24 @@ const Home = () => {
         <>
             <div   className="relative h-screen w-full bg-black">
                 <div className="absolute inset-0">
-                    <img
+                    {/* <img
                         src={images}
                         alt="Background Image"
                         className="w-full h-full object-cover opacity-50"
-                    />
+                    />*/}
+                    <video
+                        src={videoUrl}
+                        title="Video"
+                        className="w-full object-cover h-full"
+                        autoPlay
+                        muted
+                        loop
+                        controls
+                    ></video>
                 </div>
 
-                <div className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
+                <div
+                    className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
                     <h1 className="flex justify-center text-4xl sm:text-6xl md:text-8xl font-bold">
                         <span className="letter O">O</span>
                         <span className="letter R">R</span>
