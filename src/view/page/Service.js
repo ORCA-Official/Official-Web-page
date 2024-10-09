@@ -25,10 +25,10 @@ const Service = () => {
 
     // Carousel settings
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 4, // Adjust this number based on your design needs
+        slidesToShow: 7, // Adjust this number based on your design needs
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
@@ -86,11 +86,12 @@ const Service = () => {
 
                     <Slider {...settings}>
                         {techStack?.map((tech, index) => (
-                            <div
-                                key={index}
-                                className="bg-pink-200 p-4  rounded-md text-center text-lg font-poppins font-bolds shadow-md hover:bg-amber-400">
-                                {tech}
+                            <div className={'p-2 px-2'}>
+                                <div className={'w-full bg-amber-200 text-center py-4 text-2xl'}>
+                                    {tech}
+                                </div>
                             </div>
+
                         ))}
                     </Slider>
                 </div>
