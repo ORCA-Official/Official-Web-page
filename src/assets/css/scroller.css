@@ -83,6 +83,35 @@
     z-index: -1; !* Ensure it stays behind other content *!
 }
 */
+/* scroller.css */
+#smooth-wrapper {
+    overflow: hidden;
+}
+
+#smooth-content {
+    position: relative;
+}
+
+
+
+.gradient-blue {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #ffffff, #ebd5e8);
+}
+
+.gradient-purple {
+    background: linear-gradient(135deg, #ffffff, #ebd5e8);
+    z-index: 10;
+}
+
+.line {
+    height: 2px;
+    background: #000;
+    margin: 50px 0;
+}
 
 
 

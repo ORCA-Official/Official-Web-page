@@ -23,7 +23,7 @@ const Service = () => {
         'Firebase',
     ];
 
-    // Carousel settings.
+    // Carousel settings
     const settings = {
         dots: false,
         infinite: true,
@@ -64,37 +64,33 @@ const Service = () => {
 
     return (
         <>
-            <div className="container mx-auto py-12">
-
-                <div className={'px-8 lg:px-16'}>
-                    {/* OUR SERVICES Section */}
-                    <h2 className="text-3xl font-bold text-left mb-5">OUR SERVICES</h2>
-                    <ul className="grid grid-cols-2 gap-x-14 gap-y-2 pl-10">
-                        {services?.map((service, index) => (
-                            <li key={index} className="flex items-center">
-                                <span className="text-md mr-4">0{index + 1}.</span>
-                                {/* Conditionally applying border-t only for the first two items */}
-                                <p className={`text-md border-b border-gray-400 py-2 w-full ${index < 2 ? 'border-t' : ''}`}>
-                                    {service}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <div className="container mx-auto px-8 lg:px-16 py-12">
+                {/* OUR SERVICES Section */}
+                <h2 className="text-3xl font-bold text-left mb-5">OUR SERVICES</h2>
+                <ul className="grid grid-cols-2 gap-x-14 gap-y-2 pl-10">
+                    {services?.map((service, index) => (
+                        <li key={index} className="flex items-center">
+                            <span className="text-md mr-4">0{index + 1}.</span>
+                            {/* Conditionally applying border-t only for the first two items */}
+                            <p className={`text-md border-b border-gray-400 py-2 w-full ${index < 2 ? 'border-t' : ''}`}>
+                                {service}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
 
                 {/* OUR TECH STACK Section */}
-                <div className="container mx-auto py-12">
+                <div className="container mx-auto px-8 lg:px-16 py-12">
                     {/* OUR TECH STACK Section */}
-                    <h2 className="px-8 lg:px-16 text-3xl font-bold text-right mt-16 mb-8">OUR TECH STACK</h2>
+                    <h2 className="text-3xl font-bold text-right mt-16 mb-8">OUR TECH STACK</h2>
 
                     <Slider {...settings}>
                         {techStack?.map((tech, index) => (
-                            <div className={'p-2 px-2'}>
-                                <div className={'w-full bg-amber-200 text-center py-4 text-2xl'}>
-                                    {tech}
-                                </div>
+                            <div
+                                key={index}
+                                className="bg-pink-200 p-4  rounded-md text-center text-lg font-poppins font-bolds shadow-md hover:bg-amber-400">
+                                {tech}
                             </div>
-
                         ))}
                     </Slider>
                 </div>
