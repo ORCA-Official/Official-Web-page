@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Home = () => {
+const Service = () => {
     const services = [
         'Full-Stack Web Development',
         'Mobile App Development',
@@ -18,43 +17,61 @@ const Home = () => {
         'Spring',
         'Java',
         'C++',
+        'Spring Boot',
+        'MySQL',
+        'MongoDB',
+        'Firebase',
     ];
 
-    useEffect(() => {
-        const serviceSection = document.querySelector('#service-section');
-
-        gsap.set(serviceSection, { opacity: 0, y: 100 }); // Set initial state
-
-        const trigger = ScrollTrigger.create({
-            trigger: serviceSection,
-            start: 'top 80%', // Start when the top of the section hits 80% of the viewport
-            end: 'top 30%', // End when the top of the section hits 30% of the viewport
-            onEnter: () => {
-                gsap.to(serviceSection, { opacity: 1, y: 0, duration: 1 });
+    // Carousel settings
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4, // Adjust this number based on your design needs
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: "after",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
             },
-            onLeaveBack: () => {
-                gsap.to(serviceSection, { opacity: 0, y: 100, duration: 1 });
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
             },
-        });
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
 
-        return () => {
-            trigger.kill(); // Cleanup the ScrollTrigger on component unmount
-        };
-    }, []);
+
+    };
 
     return (
         <>
             <div className="container mx-auto px-8 lg:px-16 py-12">
-                {/* Other sections can be added here if needed */}
-            </div>
-            <div id="service-section" className="container mx-auto px-8 lg:px-16 py-12">
                 {/* OUR SERVICES Section */}
                 <h2 className="text-3xl font-bold text-left mb-5">OUR SERVICES</h2>
                 <ul className="grid grid-cols-2 gap-x-14 gap-y-2 pl-10">
                     {services?.map((service, index) => (
                         <li key={index} className="flex items-center">
                             <span className="text-md mr-4">0{index + 1}.</span>
-                            {/* Fix the missing backticks for className */}
+                            {/* Conditionally applying border-t only for the first two items */}
                             <p className={`text-md border-b border-gray-400 py-2 w-full ${index < 2 ? 'border-t' : ''}`}>
                                 {service}
                             </p>
@@ -63,19 +80,23 @@ const Home = () => {
                 </ul>
 
                 {/* OUR TECH STACK Section */}
-                <h2 className="text-3xl font-bold text-right mt-16 mb-8">OUR TECH STACK</h2>
-                <div className="flex justify-center">
-                    <div className="flex flex-wrap justify-center gap-6">
+                <div className="container mx-auto px-8 lg:px-16 py-12">
+                    {/* OUR TECH STACK Section */}
+                    <h2 className="text-3xl font-bold text-right mt-16 mb-8">OUR TECH STACK</h2>
+
+                    <Slider {...settings}>
                         {techStack?.map((tech, index) => (
-                            <div key={index} className="bg-pink-300 p-4 rounded-md text-center">
+                            <div
+                                key={index}
+                                className="bg-pink-200 p-4  rounded-md text-center text-lg font-poppins font-bolds shadow-md hover:bg-amber-400">
                                 {tech}
                             </div>
                         ))}
-                    </div>
+                    </Slider>
                 </div>
             </div>
         </>
     );
 };
 
-export default Home;
+export default Service;
