@@ -10,7 +10,7 @@ const Testimonial = () => {
         centerMode: true,
         infinite: true,
         centerPadding: "60px",
-        slidesToShow: 3,
+        slidesToShow: 2,
         speed: 500,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -31,13 +31,13 @@ const Testimonial = () => {
             </div>
 
             {/* Slider Section */}
-            <div className="slider-container mt-8">
+            <div className="slider-container mt-4"> {/* Reduced top margin */}
                 <Slider {...settings}>
-                    <div className="p-4 flex justify-center">
-                        <div className="testimonial-card bg-black text-white p-6 rounded-lg shadow-lg w-full h-64 max-w-sm">
-                            <h3 className="text-lg font-bold">KARA STRONG</h3>
+                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                            <h3 className="text-xl font-bold">KARA STRONG</h3>
                             <p className="text-sm italic">CEO Technara</p>
-                            <p className="mt-4">
+                            <p className="mt-4 text-base">
                                 A car rental system can be built with HTML, CSS, JavaScript, and Bootstrap.
                                 The system allows users to browse available cars, book rentals, and manage bookings.
                             </p>
@@ -46,8 +46,8 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-4 flex justify-center">
-                        <div className="testimonial-card bg-black text-white p-6 rounded-lg shadow-lg w-full h-64 max-w-sm">
+                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold">Freelancer</h3>
                             <p className="text-sm italic">Tech Enthusiast</p>
                             <p className="mt-4">
@@ -59,8 +59,8 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-4 flex justify-center">
-                        <div className="testimonial-card bg-black text-white p-6 rounded-lg shadow-lg w-full h-64 max-w-sm">
+                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold">Tech Leader</h3>
                             <p className="text-sm italic">Senior Developer</p>
                             <p className="mt-4">
@@ -74,6 +74,7 @@ const Testimonial = () => {
                     </div>
                 </Slider>
             </div>
+
         </div>
     );
 };
