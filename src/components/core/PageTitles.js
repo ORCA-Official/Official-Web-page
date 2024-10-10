@@ -7,4 +7,4 @@ const PageTitles = ({dark=true, title, bgtitle}) => {
     )
 }
 
-export default PageTitles
+export default PageTitles;
