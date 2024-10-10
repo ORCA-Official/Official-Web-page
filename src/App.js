@@ -6,7 +6,7 @@ import TeamCard from "./components/core/TeamCard";
 function App() {
   return (
      <>
-       <TeamCard/>
+       <About/>
      </>
   );
 }

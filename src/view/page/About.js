@@ -2,6 +2,7 @@ import React from 'react';
 import images from "../../images/about/aboutBG.png";
 import people from "../../images/about/people.jpg";
 import PageTitles from "../../components/core/PageTitles"
+import TeamCard from "../../components/core/TeamCard";
 const About = () => {
     return(
         <>
@@ -93,8 +94,23 @@ const About = () => {
 
                 {/* Service items */}
 
+                {/*<div>
+                    <TeamCard
+                        img={people}
+                        name="Dushan"
+                        details="Who we are"
+                    />
+                </div>*/}
+                <div className="relative flex-auto container mx-auto mt-40 px-4 text-center">
+                    <div className="flex flex-wrap justify-center gap-8">
+                        <TeamCard
+                            img={people}
+                            name="John Doe"
+                            details="John is a software engineer with 10 years of experience."
+                        />
             </div>
-
+            </div>
+            </div>
 
             {/*----------------------------- Page 3 -----------------------------*/}
 
@@ -123,10 +139,10 @@ const About = () => {
                 </div>
 
                 {/* Team Members Section */}
-                <div className="relative container mx-auto mt-40 px-4 text-center">
+                {/*<div className="relative container mx-auto mt-40 px-4 text-center">
                     <div className="flex flex-wrap justify-center gap-8 mt-20">
 
-                        {/* Team Member 1 */}
+                         Team Member 1
                         <div className="flex-1 max-w-xs">
                             <article className="relative flex flex-col justify-end overflow-hidden rounded-2xl p-4 pb-8 pt-40 shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <img src={people} alt="Team Member" className="absolute inset-0 h-full w-full object-cover" />
@@ -138,7 +154,7 @@ const About = () => {
                             </article>
                         </div>
 
-                        {/* Team Member 2 */}
+                         Team Member 2
                         <div className="flex-1 max-w-xs">
                             <article className="relative flex flex-col justify-end overflow-hidden rounded-2xl p-4 pb-8 pt-40 shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <img src={people} alt="Team Member" className="absolute inset-0 h-full w-full object-cover" />
@@ -150,7 +166,7 @@ const About = () => {
                             </article>
                         </div>
 
-                        {/* Team Member 3 */}
+                         Team Member 3
                         <div className="flex-1 max-w-xs">
                             <article className="relative flex flex-col justify-end overflow-hidden rounded-2xl p-4 pb-8 pt-40 shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <img src={people} alt="Team Member" className="absolute inset-0 h-full w-full object-cover" />
@@ -162,7 +178,7 @@ const About = () => {
                             </article>
                         </div>
 
-                        {/* Team Member 4 */}
+                         Team Member 4
                         <div className="flex-1 max-w-xs">
                             <article className="relative flex flex-col justify-end overflow-hidden rounded-2xl p-4 pb-8 pt-40 shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <img src={people} alt="Team Member" className="absolute inset-0 h-full w-full object-cover" />
@@ -174,6 +190,16 @@ const About = () => {
                             </article>
                         </div>
 
+                    </div>
+                </div>*/}
+
+                <div className="relative flex-auto container mx-auto mt-40 px-4 text-center">
+                    <div className="flex flex-wrap justify-center gap-8">
+                        <TeamCard
+                            img={people}
+                            name="John Doe"
+                            details="John is a software engineer with 10 years of experience."
+                        />
                     </div>
                 </div>
             </div>
