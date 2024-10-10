@@ -21,14 +21,15 @@ const Service = () => {
     ];
 
     const techStack = [
-        <img src={react} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={node} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={mysql} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={java} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={mongodb} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={spring} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={c} alt="Java" style={{ width: '60px', height: '60px' }} />,
-        <img src={firebase} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        'React',
+        'Node.js',
+        'Spring',
+        'Java',
+        'C++',
+        'Spring Boot',
+        'MySQL',
+        'MongoDB',
+        'Firebase',
     ];
 
     // Carousel settings
@@ -99,8 +100,7 @@ const Service = () => {
                     <Slider {...settings}>
                         {techStack?.map((tech, index) => (
                             <div className={'p-2 px-2'}>
-                               {/* <div className={'w-full bg-amber-200 rounded-full text-center py-4 text-2xl'}>*/}
-                                <div className={'w-full  rounded-full text-center py-4 text-2xl flex items-center justify-center'}>
+                                <div className={'w-full bg-amber-200 rounded-full text-center py-4 text-2xl'}>
                                     {tech}
                                 </div>
                             </div>
