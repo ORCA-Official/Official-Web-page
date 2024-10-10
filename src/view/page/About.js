@@ -1,13 +1,14 @@
 import React from 'react';
 import images from "../../images/about/aboutBG.png";
 import people from "../../images/about/people.jpg";
+import PageTitles from "../../components/core/PageTitles"
 const About = () => {
     return(
         <>
             {/*----------------------------- Page 1 -----------------------------*/}
             <div className="min-h-screen flex flex-col items-center justify-center relative">
                 {/* Background Image */}
-                <div className="absolute inset-0 z-10">
+                <div className="absolute inset-0">
                     <img
                         src={images}
                         alt="Background Image"
@@ -16,7 +17,7 @@ const About = () => {
                 </div>
 
                 {/* Content */}
-                <div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4 z-50">
+                {/*<div className="absolute -mt-80 flex flex-col items-center justify-center h-full text-center text-white space-y-4 z-50">
                     <h1 className="text-9xl font-extrabold opacity-15">
                         WHO WE ARE
                     </h1>
@@ -26,6 +27,14 @@ const About = () => {
                     <h2 className="text-4xl font-extrabold">
                         ABOUT US
                     </h2>
+                </div>*/}
+
+                <div>
+                    <PageTitles
+                        dark={true}            // Use `true` if you want the dark mode
+                        title="About Us"
+                        bgtitle="Who we are"    // Background title
+                    />
                 </div>
 
                 {/* Paragraph - Company description */}
@@ -59,8 +68,8 @@ const About = () => {
 
             {/*----------------------------- Page 2 -----------------------------*/}
             <div>
-                <div className="min-h-screen flex flex-col items-center justify-center relative bg-white">
-                    {/* Content */}
+               {/* <div className="min-h-screen flex flex-col items-center justify-center relative bg-white">
+                     Content
                     <div className="relative -mt-80 flex flex-col items-center justify-center h-full text-center text-gray-600 space-y-4">
                         <h1 className="text-9xl font-extrabold opacity-15">
                             WHAT WE DO
@@ -72,7 +81,15 @@ const About = () => {
                             OUR SERVICES
                         </h2>
                     </div>
-                </div>
+                </div>*/}
+
+                   <div>
+                       <PageTitles
+                           dark={false}            // Use `true` if you want the dark mode
+                           title="OUR SERVICES"
+                           bgtitle="Who we are"    // Background title
+                       />
+                   </div>
 
                 {/* Service items */}
 
