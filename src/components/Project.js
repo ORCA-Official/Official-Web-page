@@ -1,5 +1,5 @@
 import React from 'react';
-import carbackground from '../../assets/images/carbackground01.png';
+import carbackground from '../assets/images/carbackground01.png';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const Project = () => {
