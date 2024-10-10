@@ -21,8 +21,8 @@ import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
 import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 import Home from "./view/page/Home";
-import Service from "./view/page/Service";
-import About from "./view/page/About";
+import Service from "./components/Service";
+import About from "./components/About";
 import './assets/css/scroller.css';
 import Project from "./view/page/Project";
 

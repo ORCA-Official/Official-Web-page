@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import images from "../../assets/images/image.png";
-import Service from "./Service";
+import Service from "../../components/Service";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
