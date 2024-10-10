@@ -10,6 +10,7 @@ import mongodb from '../assets/images/mongodb.png';
 import spring from '../assets/images/spring.png';
 import c from '../assets/images/c.png';
 import firebase from '../assets/images/firebase.png';
+import Services from "./core/Services";
 
 const OurService = () => {
     const services = [
@@ -77,17 +78,20 @@ const OurService = () => {
                 <div className={'px-8 lg:px-16'}>
                     {/* OUR SERVICES Section */}
                     <h2 className="text-3xl font-bold text-left mb-5">OUR SERVICES</h2>
-                    <ul className="grid grid-cols-2 gap-x-14 gap-y-2 pl-10">
+                    {/*<ul className="grid grid-cols-2 gap-x-14 gap-y-2 pl-10">
                         {services?.map((service, index) => (
                             <li key={index} className="flex items-center">
                                 <span className="text-md mr-4">0{index + 1}.</span>
-                                {/* Conditionally applying border-t only for the first two items */}
-                                <p className={`text-md border-b border-gray-400 py-2 w-full ${index < 2 ? 'border-t' : ''}`}>
+                                 Conditionally applying border-t only for the first two items
+                                <p className={`text-md  py-2 w-full ${index < 2 ? 'border-t' : ''}`}>
                                     {service}
                                 </p>
                             </li>
                         ))}
-                    </ul>
+                    </ul>*/}
+
+                    <Services />
+
                 </div>
 
                 {/* OUR TECH STACK Section */}
