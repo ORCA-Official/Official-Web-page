@@ -3,6 +3,7 @@ import images from "../../images/about/aboutBG.png";
 import people from "../../images/about/people.jpg";
 import PageTitles from "../../components/core/PageTitles"
 import TeamCard from "../../components/core/TeamCard";
+import Footer from "../../components/Footer";
 const About = () => {
     return(
         <>
@@ -203,6 +204,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer/>
         </>
     )
 }
