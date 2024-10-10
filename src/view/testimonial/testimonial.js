@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
+
 const Testimonial = () => {
     const settings = {
         className: "center",
@@ -31,10 +33,11 @@ const Testimonial = () => {
             </div>
 
             {/* Slider Section */}
-            <div className="slider-container mt-4"> {/* Reduced top margin */}
-                <Slider {...settings}>
+            <div className="slider-container mt-4">
+
+            <Slider {...settings}>
                     <div className="p-2 flex justify-center"> {/* Reduced padding */}
-                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-xl font-bold">KARA STRONG</h3>
                             <p className="text-sm italic">CEO Technara</p>
                             <p className="mt-4 text-base">
@@ -47,7 +50,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div className="p-2 flex justify-center"> {/* Reduced padding */}
-                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold">Freelancer</h3>
                             <p className="text-sm italic">Tech Enthusiast</p>
                             <p className="mt-4">
@@ -60,7 +63,7 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div className="p-2 flex justify-center"> {/* Reduced padding */}
-                        <div className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold">Tech Leader</h3>
                             <p className="text-sm italic">Senior Developer</p>
                             <p className="mt-4">
