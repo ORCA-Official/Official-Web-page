@@ -33,11 +33,11 @@ const Home = () => {
 
         tl.fromTo(".R",
             { x: 0, scale: 0, opacity: 0 },
-            { x: -moveDistance / 2.5, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { x: -moveDistance / 2.5, scale: 1, opacity: 1, duration: 4 }, "-=2"
         );
         tl.fromTo(".C",
             { x: 0, scale: 0, opacity: 0 },
-            { x: moveDistance / 2.5, scale: 1, opacity: 1, duration: 4, ease: "bounce.out" }, "-=2"
+            { x: moveDistance / 2.5, scale: 1, opacity: 1, duration: 4}, "-=2"
         );
 
 
