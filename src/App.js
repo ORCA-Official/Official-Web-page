@@ -6,9 +6,9 @@ import Testimonial from "./view/testimonial/testimonial";
 function App() {
   return (
      <>
-    {/*  {<Project/>}*/}
+      {<Project/>}
 
-         {<Testimonial/>}
+         {/*{<Testimonial/>}*/}
      </>
   );
 }

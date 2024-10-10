@@ -33,28 +33,31 @@ const Project = () => {
                 <div className="container mx-auto px-4 sm:px-8 py-16">
 
                     {/* Project Title */}
-                    <h1 className="text-4xl font-bold mb-6 font-montserrat tracking-[0.2em]">CAR RENTAL SYSTEM</h1>
+                    <h1 className="text-4xl font-bold mb-6 font-montserrat tracking-[0.2em] lg:ml-8">
+                        CAR RENTAL SYSTEM
+                    </h1>
 
                     {/* Technology Stack */}
-                    <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
+                    <div className="flex flex-wrap gap-2 sm:gap-4 mb-8 lg:ml-8">
                         {['HTML', 'CSS', 'JavaScript', 'Spring Boot', 'JWT', 'Bootstrap'].map((tech, index) => (
                             <span
                                 key={index}
                                 className="inline-flex items-center gap-2 border rounded-md border-white px-4 sm:px-6 py-2 text-sm sm:text-base">
-                                {tech}
-                            </span>
+            {tech}
+        </span>
                         ))}
                     </div>
 
+
                     {/* Project Description */}
-                    <p className="text-white font-medium max-w-xl sm:max-w-3xl mb-8 leading-relaxed text-sm sm:text-base">
+                    <p className="text-white font-medium max-w-xl sm:max-w-3xl mb-8 leading-relaxed text-sm sm:text-base lg:ml-8">
                         A car rental system built with HTML/CSS, JavaScript, and Bootstrap front-end for responsive design.
                         The backend uses Spring Boot with JWT for secure authentication. Allows users to easily browse cars,
                         view details, and manage bookings with admin handling car listings and bookings.
                     </p>
 
                     {/* Live Website & GitHub Links */}
-                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:ml-4">
                         <a
                             href="https://github.com/your-github-repo" // Replace with your GitHub link
                             target="_blank"
