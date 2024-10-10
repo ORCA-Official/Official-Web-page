@@ -35,7 +35,7 @@ const Service = () => {
         dots: false,
         infinite: true,
         speed: 1000,
-        slidesToShow: 7, // Adjust this number based on your design needs
+        slidesToShow: 7, // Adjust this number based on your design needs.
         slidesToScroll: 0.1,
         autoplay: true,
         autoplaySpeed: 1,
