@@ -25,4 +25,4 @@ yarn-debug.log*
 yarn-error.log*
 
 
-src/view/page/text
+src/view/page/text/*
