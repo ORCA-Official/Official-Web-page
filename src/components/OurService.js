@@ -11,7 +11,7 @@ import spring from '../assets/images/spring.png';
 import c from '../assets/images/c.png';
 import firebase from '../assets/images/firebase.png';
 
-const Service = () => {
+const OurService = () => {
     const services = [
         'Full-Stack Web Development',
         'Mobile App Development',
@@ -112,4 +112,4 @@ const Service = () => {
     );
 };
 
-export default Service;
+export default OurService;
