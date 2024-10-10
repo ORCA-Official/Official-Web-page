@@ -36,12 +36,12 @@ const ServiceCard = ({service, index}) => {
     };
 
     return (
-        <div onClick={expand} className={`transition-all duration-300 ease-in-out h-max md:w-full w-[45%] flex-grow-0 border-b border-gray-400 
-            ${index < 1 ? 'border-y' : ''} 
+        <div onClick={expand} className={`transition-all duration-300 ease-in-out h-max w-full flex-grow-0 border-b border-gray-400
+            ${index < 2 ? 'border-y' : ''} 
             ${clicked ? 'max-h-96 opacity-100' : ' max-h-12 overflow-hidden'} cursor-pointer`}
         >
             <div className={'w-full h-full'}>
-                <div className={`w-full flex justify-between font-Lato items-center p-2 ${clicked ? '' : ''}`}>
+                <div className={`w-full flex justify-between font-Lato items-center p-2 ${clicked ? 'text-white bg-black' : 'hover:text-white hover:bg-black'}`}>
                     <div className={'text-xl'}>
                         <span className={'text-lg'}>{(index + 1).toString().padStart(2, '0')}. </span>
                         <span>{service.name}</span>
