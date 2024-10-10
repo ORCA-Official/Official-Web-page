@@ -2,6 +2,14 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import java from '../../assets/images/java.png';
+import react from '../../assets/images/react.png';
+import node from '../../assets/images/nodejs.png';
+import mysql from '../../assets/images/mysql.png';
+import mongodb from '../../assets/images/mongodb.png';
+import spring from '../../assets/images/spring.png';
+import c from '../../assets/images/c.png';
+import firebase from '../../assets/images/firebase.png';
 
 const Service = () => {
     const services = [
@@ -12,15 +20,14 @@ const Service = () => {
     ];
 
     const techStack = [
-        'React',
-        'Node.js',
-        'Spring',
-        'Java',
-        'C++',
-        'Spring Boot',
-        'MySQL',
-        'MongoDB',
-        'Firebase',
+        <img src={react} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={node} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={mysql} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={java} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={mongodb} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={spring} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={c} alt="Java" style={{ width: '60px', height: '60px' }} />,
+        <img src={firebase} alt="Java" style={{ width: '60px', height: '60px' }} />,
     ];
 
     // Carousel settings
