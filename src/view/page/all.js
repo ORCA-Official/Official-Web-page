@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import images from "../../assets/images/image.png";
-import Service from "../../components/Service";
+import OurService from "../../components/OurService";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -121,7 +121,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <Service />
+            <OurService />
         </>
     );
 };

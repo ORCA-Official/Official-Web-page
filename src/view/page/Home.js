@@ -9,7 +9,7 @@ import { useGSAP } from '@gsap/react';
 
 // ** Custom Imports
 import Hero from "../../components/HeroSection";
-import Service from "../../components/Service";
+import OurService from "../../components/OurService";
 import About from "../../components/About";
 import Project from "../../components/Project";
 
@@ -111,7 +111,7 @@ const Home = () => {
                     <About/>
                 </div>
                 <div className="box box-c gradient-purple" data-speed="0.8">
-                    <Service/>
+                    <OurService/>
                 </div>
                 <div className="box box-d gradient-purple" data-speed="0.8">
                     <Project/>
