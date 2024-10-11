@@ -12,7 +12,7 @@ const Project = () => {
 
     return (
         <div>
-            {/* Section with Number and Projects Header */}
+            {/* Section with Number and Projects Header ..*/}
             <div className="w-full bg-black">
                 <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-12 flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
                     <div className="lg:w-1/2 w-full space-y-4 lg:order-2 text-right">
