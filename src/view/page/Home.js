@@ -97,6 +97,23 @@ const Home = () => {
                 }
             });
 
+            //create the effect where Fifth section comes in place of the fourth
+            gsap.fromTo(".box-e", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-e',
+                    start: 'top top',      // Start when .box-c reaches the top
+                    end: '+=100%',         // Continue for the height of the section
+                    scrub: true,           // Smooth transition
+                    pin: true,             // Pin this section during the transition
+                    anticipatePin: 1,      // Anticipate the pinning for smoothness
+                }
+            });
+
 
         },
         { scope: main }
@@ -116,6 +133,8 @@ const Home = () => {
                 </div>
                 <div className="box box-d gradient-purple" data-speed="0.8">
                     <Project/>
+                </div>
+                <div className="box box-e gradient-purple" data-speed="0.8">
                     <Testimonial/>
                 </div>
                 <div className="line"></div>
