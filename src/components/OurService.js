@@ -13,12 +13,12 @@ import firebase from '../assets/images/firebase.png';
 import Services from "./core/Services";
 
 const OurService = () => {
-    const services = [
+    /*const services = [
         'Full-Stack Web Development',
         'Mobile App Development',
         'Desktop Application Development',
         'Cloud Integration & Deployment',
-    ];
+    ];*/
 
     const techStack = [
         <img src={react} alt="Java" style={{ width: '60px', height: '60px' }} />,
