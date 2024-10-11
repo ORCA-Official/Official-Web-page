@@ -113,7 +113,7 @@ const OurService = () => {
 
                     <Slider {...settings}>
                         {techStack?.map((tech, index) => (
-                            <div className={'p-2 px-2'}>
+                            <div key={index} className={'p-2 px-2'}>
                                 {/*<div className={'w-full bg-amber-200 rounded-full text-center py-4 text-2xl'}>*/}
                                 <div className={'w-full rounded-full text-center py-4 text-2xl flex items-center justify-center'}>
                                     {tech}

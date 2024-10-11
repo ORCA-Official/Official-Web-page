@@ -12,7 +12,7 @@ const Services = () => {
         <div className={'w-full'}>
             <div className={'flex flex-wrap justify-between'}>
                 {data.map((service, index) => (
-                    <ServiceCard service={service} index={index} />
+                    <ServiceCard key={index} service={service} index={index} />
                 ))}
             </div>
         </div>
@@ -52,8 +52,8 @@ const ServiceCard = ({service, index}) => {
 
                 <div className={`pl-8 py-4 transition-all duration-300 ease-in-out ${clicked ? 'opacity-100' : 'opacity-0'}`}>
                     <div className={'mt-1 flex flex-wrap gap-2'}>
-                        {service.stack.map((text) => (
-                            <span className={'px-1 py-0.5 border rounded-md border-black'}>{text}</span>
+                        {service.stack.map((text, index) => (
+                            <span key={index} className={'px-1 py-0.5 border rounded-md border-black'}>{text}</span>
                         ))}
                     </div>
 
