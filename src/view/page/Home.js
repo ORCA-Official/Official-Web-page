@@ -15,6 +15,7 @@ import Project from "../../components/Project";
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
+import Testimonial from "../../components/Testimonial";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -115,6 +116,7 @@ const Home = () => {
                 </div>
                 <div className="box box-d gradient-purple" data-speed="0.8">
                     <Project/>
+                    <Testimonial/>
                 </div>
                 <div className="line"></div>
             </div>
