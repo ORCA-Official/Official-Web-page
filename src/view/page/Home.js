@@ -114,6 +114,9 @@ const Home = () => {
                 }
             });
 
+            gsap.config({ trialWarn: false });
+
+
 
         },
         { scope: main }
