@@ -3,8 +3,7 @@ import '../assets/css/styles.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-
+import { HomeTitles } from './core/HomeTitles';
 
 const Testimonial = () => {
     const settings = {
@@ -36,23 +35,14 @@ const Testimonial = () => {
         ],
     };
 
-
     return (
-        <div className="testimonial-section bg-white py-12">
-            {/* Header Section */}
-            <div className="container mx-auto px-4 sm:px-8 lg:px-16 flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
-                <div className="lg:w-1/2 space-y-4">
-                    <h1 className="text-6xl font-bold font-kumar text-gray-300">/3.</h1>
-                </div>
-                <div className="lg:w-1/3 flex flex-col space-y-4 items-end">
-                    <h2 className="text-3xl font-bold text-right pt-2 mb-4 sm:text-2xl">TESTIMONIALS</h2>
-                </div>
-            </div>
+        <>
+            <HomeTitles title={'Testimonial'} number={3} />
 
             {/* Slider Section */}
             <div className="slider-container mt-4">
                 <Slider {...settings}>
-                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                    <div className="p-2 flex justify-center">
                         <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-xl font-bold sm:text-lg">KARA STRONG</h3>
                             <p className="text-sm italic">CEO Technara</p>
@@ -65,7 +55,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                    <div className="p-2 flex justify-center">
                         <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold sm:text-base">Freelancer</h3>
                             <p className="text-sm italic">Tech Enthusiast</p>
@@ -78,7 +68,7 @@ const Testimonial = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="p-2 flex justify-center"> {/* Reduced padding */}
+                    <div className="p-2 flex justify-center">
                         <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold sm:text-base">Tech Leader</h3>
                             <p className="text-sm italic">Senior Developer</p>
@@ -93,7 +83,7 @@ const Testimonial = () => {
                     </div>
                 </Slider>
             </div>
-        </div>
+        </>
     );
 };
 
