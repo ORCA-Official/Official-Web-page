@@ -1,16 +1,14 @@
-import './App.css';
-import Project from "./view/project/Project";
-import Testimonial from "./view/testimonial/testimonial";
-
+import React from 'react';
+import Home from "./view/page/Home";
 
 function App() {
-  return (
-     <>
-      {<Project/>}
 
-         {/*{<Testimonial/>}*/}
-     </>
-  );
+
+    return (
+        <div>
+            <Home />
+        </div>
+    );
 }
 
 export default App;

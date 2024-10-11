@@ -1,70 +1,125 @@
-import React from 'react';
-import images from "../../images/image.png"
-import Service from "./Service";
+// ** React Imports
+import React, { useRef } from 'react';
+
+// ** GSAP Imports
+import gsap from 'gsap-trial';
+import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
+import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
+import { useGSAP } from '@gsap/react';
+
+// ** Custom Imports
+import Hero from "../../components/HeroSection";
+import OurService from "../../components/OurService";
+import About from "../../components/About";
+import Project from "../../components/Project";
+
+// ** Styles Imports
+import '../../assets/css/scroller.css';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
+    const main = useRef();
+    const smoother = useRef();
+
+    useGSAP(
+        () => {
+            // Initialize ScrollSmoother
+            smoother.current = ScrollSmoother.create({
+                wrapper: '#smooth-wrapper',
+                content: '#smooth-content',
+                smooth: 10,
+                effects: true,
+            });
+
+            // Create the effect where second section comes in place of the first update
+            gsap.fromTo(".box-b", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 0, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-b',
+                    start: 'top top',      // Start when .box-b reaches the top
+                    end: '+=100%',         // Continue for the height of the section
+                    scrub: true,           // Smooth transition
+                    pin: true,             // Pin this section during the transition
+                    anticipatePin: 1,      // Anticipate the pinning for smoothness
+                }
+            });
+
+            // Fade out the first section as the second comes in
+            gsap.to(".box-a", {
+                opacity: 0,              // Fade out the first section
+                scrollTrigger: {
+                    trigger: '.box-b',    // Triggered by the second section
+                    start: 'top top',     // Start fading out when .box-b reaches the top
+                    end: 'bottom top',    // End the fade-out when .box-b takes its place
+                    scrub: true,          // Smooth transition
+                }
+            });
+
+
+            // Create the effect where third section comes in place of the second
+            gsap.fromTo(".box-c", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-c',
+                    start: 'top top',      // Start when .box-c reaches the top
+                    end: '+=100%',         // Continue for the height of the section
+                    scrub: true,           // Smooth transition
+                    pin: true,             // Pin this section during the transition
+                    anticipatePin: 1,      // Anticipate the pinning for smoothness
+                }
+            });
+
+            // Create the effect where Fourth section comes in place of the third
+            gsap.fromTo(".box-d", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-d',
+                    start: 'top top',      // Start when .box-c reaches the top
+                    end: '+=100%',         // Continue for the height of the section
+                    scrub: true,           // Smooth transition
+                    pin: true,             // Pin this section during the transition
+                    anticipatePin: 1,      // Anticipate the pinning for smoothness
+                }
+            });
+
+
+        },
+        { scope: main }
+    );
+
     return (
-        <>
-            <div className="relative h-screen w-full bg-black">
-                <div className="absolute inset-0">
-                    <img
-                        src={images}
-                        alt="Background Image"
-                        className="w-full h-full object-cover opacity-50"
-                    />
+        <div id="smooth-wrapper" ref={main}>
+            <div id="smooth-content">
+                <div className="box box-a gradient-blue" data-speed="0.5">
+                    <Hero/>
                 </div>
-
-                <div className="relative flex flex-col items-center justify-center h-full text-center text-white space-y-4">
-                    <h1 className="flex justify-center text-4xl sm:text-6xl md:text-8xl font-bold space-x-2 sm:space-x-4 md:space-x-8 lg:space-x-80">
-                        <span>O</span>
-                        <span>R</span>
-                        <span>C</span>
-                        <span>A</span>
-                    </h1>
-
-                    <p className="text-lg md:text-xl lg:text-2xl">Building Digital Solutions for the Future.</p>
-
-                    <div className="flex space-x-4">
-                        <button className="px-6 py-2 bg-white text-black rounded-md shadow-md hover:bg-gray-200">
-                            Start Your Project
-                        </button>
-                        <button className="px-6 py-2 border border-white text-white rounded-md hover:bg-white hover:text-black transition">
-                            Explore Our Services
-                            <span className="ml-2">→</span>
-                        </button>
-                    </div>
+                <div className="box box-b gradient-orange" data-speed="0.8">
+                    <About/>
                 </div>
+                <div className="box box-c gradient-purple" data-speed="0.8">
+                    <OurService/>
+                </div>
+                <div className="box box-d gradient-purple" data-speed="0.8">
+                    <Project/>
+                </div>
+                <div className="line"></div>
             </div>
-
-            <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-12 flex flex-col lg:flex-row items-start justify-between space-y-8 lg:space-y-0">
-                {/* Left Section - Number and Text */}
-                <div className="lg:w-1/2 space-y-4">
-                    <h1 className="text-6xl font-bold text-gray-300">/1.</h1>
-                    <p className="text-md md:text-lg text-gray-700">
-                        At Orca Tech Solutions, we specialize in creating innovative software solutions tailored to meet
-                        the unique needs of businesses. With a focus on excellence, collaboration, and cutting-edge
-                        technology, we help companies streamline operations, improve efficiency, and stay ahead in the
-                        digital age.
-                    </p>
-                </div>
-
-                {/* Right Section - ABOUT US with Image */}
-                <div className="lg:w-1/3 flex flex-col space-y-4 items-end">
-                    <h2 className="text-3xl font-bold text-right pt-2 mb-4">ABOUT US</h2>
-                    <img
-                        src={images}
-                        alt="About Us"
-                        className="w-full h-auto object-cover rounded-lg shadow-md ring-gray-200"
-                    />
-                </div>
-            </div>
-
-            <Service />
-        </>
-
-
-    )
-        ;
+        </div>
+    );
 };
 
 export default Home;
