@@ -8,22 +8,20 @@ import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 
 // ** Custom Imports
-import Navbar from "../../components/core/Navbar";
-import HeroSection from "../../components/home/HeroSection";
-import About from "../../components/home/About";
+import Hero from "../../components/home/HeroSection";
 import OurService from "../../components/home/OurService";
+import About from "../../components/home/About";
+import Project from "../../components/home/Project";
 import Testimonial from "../../components/home/Testimonial";
 import Footer from "../../components/core/Footer";
-import Project from "../../components/home/Project";
-
+import Navbar from "../../components/core/Navbar";
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
 
-
-
+// ** GSAP Configs
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
-
+gsap.config({ trialWarn: false });
 const Home = () => {
     const main = useRef();
     const smoother = useRef();
@@ -48,7 +46,7 @@ const Home = () => {
         };
     }, [scrollPosition]);
 
-    useGSAP(
+    /*useGSAP(
         () => {
             // Initialize ScrollSmoother
             smoother.current = ScrollSmoother.create({
@@ -163,14 +161,14 @@ const Home = () => {
 
         },
         { scope: main }
-    );
+    );*/
 
     return (
         <>
 
             {/* Navbar with dynamic visibility */}
             <div
-                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
                 <Navbar/>
             </div>
 
@@ -178,7 +176,7 @@ const Home = () => {
             <div id="smooth-wrapper" ref={main}>
                 <div id="smooth-content">
                     <div className="box box-a gradient-blue" data-speed="0.5">
-                        <HeroSection/>
+                        <Hero/>
                     </div>
                     <div className="box box-b gradient-orange" data-speed="0.8">
                         <About/>
