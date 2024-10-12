@@ -17,7 +17,8 @@ import Project from "../../components/Project";
 import '../../assets/css/scroller.css';
 import Testimonial from "../../components/Testimonial";
 import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/core/Navbar";
+
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
