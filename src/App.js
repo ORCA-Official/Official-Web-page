@@ -1,15 +1,14 @@
-import './App.css';
-import About from "./view/page/About";
-import TeamCard from "./components/core/TeamCard";
-import Footer from "./components/Footer";
+import React from 'react';
+import Home from "./view/Home/Home";
 
 function App() {
-  return (
-     <>
-       <About/>
-       <Footer/>
-     </>
-  );
+
+
+    return (
+        <div>
+            <Home />
+        </div>
+    );
 }
 
 export default App;
