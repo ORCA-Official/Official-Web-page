@@ -16,6 +16,7 @@ import Project from "../../components/Project";
 // ** Styles Imports
 import '../../assets/css/scroller.css';
 import Testimonial from "../../components/Testimonial";
+import Footer from "../../components/Footer";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
@@ -114,6 +115,24 @@ const Home = () => {
                 }
             });
 
+            //create the effect where Sixth section comes in place of the fifth
+            gsap.fromTo(".box-f", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-f',
+                    start: 'top top',
+                    end: '+=50%',          // Reduce the scroll distance
+                    scrub: true,           // Smooth transition
+                    pin: false,            // Disable pinning to avoid affecting the footer
+                    anticipatePin: 1,
+                }
+            });
+
+
             gsap.config({ trialWarn: false });
 
 
@@ -139,6 +158,9 @@ const Home = () => {
                 </div>
                 <div className="box box-e gradient-purple" data-speed="0.8">
                     <Testimonial/>
+                </div>
+                <div className="box box-f gradient-purple" data-speed="1.8">
+                    <Footer/>
                 </div>
                 <div className="line"></div>
             </div>
