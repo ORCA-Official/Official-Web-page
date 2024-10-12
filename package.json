@@ -8,6 +8,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "browser-router": "^0.2.0",
+    "embla-carousel-auto-scroll": "^8.3.0",
+    "embla-carousel-react": "^8.3.0",
     "framer-motion": "^11.11.8",
     "gsap": "^3.12.5",
     "gsap-trial": "^3.12.5",
@@ -19,6 +21,7 @@
     "react-slick": "^0.30.2",
     "routes": "^2.1.0",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

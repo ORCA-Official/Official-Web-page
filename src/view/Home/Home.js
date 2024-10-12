@@ -19,9 +19,9 @@ import Navbar from "../../components/core/Navbar";
 // ** Styles Imports
 import '../../assets/css/scroller.css';
 
-
+// ** GSAP Configs
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
-
+gsap.config({ trialWarn: false });
 const Home = () => {
     const main = useRef();
     const smoother = useRef();

@@ -1,13 +1,20 @@
+// ** React Imports
 import React, {useEffect, useState} from 'react';
+
+// ** GSAP Imports
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+
+// ** Assets Imports
 import videoUrl from "../../assets/video/bg.mp4";
 import logo from '../../assets/images/oa.png'
 import '../../assets/css/hero-styles.css'
-import {motion} from 'framer-motion';
-import {BsArrowUpRight} from "react-icons/bs";
 
-gsap.registerPlugin(ScrollTrigger);
+// ** Frame Motion Imports
+import {motion} from 'framer-motion';
+
+// ** React Icons Import
+import {BsArrowUpRight} from "react-icons/bs";
 
 const HeroSection = () => {
 
@@ -88,7 +95,7 @@ const HeroSection = () => {
                         Building Digital Solutions for the Future.
                     </motion.p>
 
-                    <div className={'flex h-max justify-end'}>
+                    <div className={'md:hidden flex h-max justify-end'}>
                         <button className={'md:text-lg text-xs mr-6 md:px-6 md:py-2 px-2 py-1 border border-white text-white md:rounded-md rounded-sm'}>
                             Start Your Project
                         </button>
