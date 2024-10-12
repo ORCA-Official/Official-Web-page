@@ -1,5 +1,5 @@
 // ** React Imports
-import React, { useRef } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 // ** GSAP Imports
 import gsap from 'gsap-trial';
@@ -17,12 +17,33 @@ import Project from "../../components/Project";
 import '../../assets/css/scroller.css';
 import Testimonial from "../../components/Testimonial";
 import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
     const main = useRef();
     const smoother = useRef();
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPosition = window.pageYOffset;
+            if (currentScrollPosition > scrollPosition && currentScrollPosition > 100) {
+                setIsNavbarVisible(false);
+            } else {
+                setIsNavbarVisible(true);
+            }
+            setScrollPosition(currentScrollPosition);
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrollPosition]);
 
     useGSAP(
         () => {
@@ -142,29 +163,39 @@ const Home = () => {
     );
 
     return (
-        <div id="smooth-wrapper" ref={main}>
-            <div id="smooth-content">
-                <div className="box box-a gradient-blue" data-speed="0.5">
-                    <Hero/>
-                </div>
-                <div className="box box-b gradient-orange" data-speed="0.8">
-                    <About/>
-                </div>
-                <div className="box box-c gradient-purple" data-speed="0.8">
-                    <OurService/>
-                </div>
-                <div className="box box-d gradient-purple" data-speed="0.8">
-                    <Project/>
-                </div>
-                <div className="box box-e gradient-purple" data-speed="0.8">
-                    <Testimonial/>
-                </div>
-                <div className="box box-f gradient-purple" data-speed="1.8">
-                    <Footer/>
-                </div>
-                <div className="line"></div>
+        <>
+
+            {/* Navbar with dynamic visibility */}
+            <div
+                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                <Navbar/>
             </div>
-        </div>
+
+            {/* Smooth scrolling content */}
+            <div id="smooth-wrapper" ref={main}>
+                <div id="smooth-content">
+                    <div className="box box-a gradient-blue" data-speed="0.5">
+                        <Hero/>
+                    </div>
+                    <div className="box box-b gradient-orange" data-speed="0.8">
+                        <About/>
+                    </div>
+                    <div className="box box-c gradient-purple" data-speed="0.8">
+                        <OurService/>
+                    </div>
+                    <div className="box box-d gradient-purple" data-speed="0.8">
+                        <Project/>
+                    </div>
+                    <div className="box box-e gradient-purple" data-speed="0.8">
+                        <Testimonial/>
+                    </div>
+                    <div className="box box-f gradient-purple" data-speed="1.8">
+                        <Footer/>
+                    </div>
+                    <div className="line"></div>
+                </div>
+            </div>
+        </>
     );
 };
 
