@@ -12,12 +12,12 @@ import Hero from "../../components/home/HeroSection";
 import OurService from "../../components/home/OurService";
 import About from "../../components/home/About";
 import Project from "../../components/home/Project";
-
-// ** Styles Imports
-import '../../assets/css/scroller.css';
 import Testimonial from "../../components/home/Testimonial";
 import Footer from "../../components/core/Footer";
 import Navbar from "../../components/core/Navbar";
+
+// ** Styles Imports
+import '../../assets/css/scroller.css';
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
