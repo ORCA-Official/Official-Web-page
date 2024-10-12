@@ -1,5 +1,5 @@
 // ** React Imports
-import React, { useRef } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 // ** GSAP Imports
 import gsap from 'gsap-trial';
@@ -16,12 +16,34 @@ import Project from "../../components/Project";
 // ** Styles Imports
 import '../../assets/css/scroller.css';
 import Testimonial from "../../components/Testimonial";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 const Home = () => {
     const main = useRef();
     const smoother = useRef();
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPosition = window.pageYOffset;
+            if (currentScrollPosition > scrollPosition && currentScrollPosition > 100) {
+                setIsNavbarVisible(false);
+            } else {
+                setIsNavbarVisible(true);
+            }
+            setScrollPosition(currentScrollPosition);
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [scrollPosition]);
 
     useGSAP(
         () => {
@@ -114,6 +136,24 @@ const Home = () => {
                 }
             });
 
+            //create the effect where Sixth section comes in place of the fifth
+            gsap.fromTo(".box-f", {
+                y: '100%',  // Start off the screen at the bottom
+                opacity: 1, // Start invisible
+            }, {
+                y: '0%',    // Move to its normal position
+                opacity: 1, // Fade in
+                scrollTrigger: {
+                    trigger: '.box-f',
+                    start: 'top top',
+                    end: '+=50%',          // Reduce the scroll distance
+                    scrub: true,           // Smooth transition
+                    pin: false,            // Disable pinning to avoid affecting the footer
+                    anticipatePin: 1,
+                }
+            });
+
+
             gsap.config({ trialWarn: false });
 
 
@@ -123,26 +163,39 @@ const Home = () => {
     );
 
     return (
-        <div id="smooth-wrapper" ref={main}>
-            <div id="smooth-content">
-                <div className="box box-a gradient-blue" data-speed="0.5">
-                    <Hero/>
-                </div>
-                <div className="box box-b gradient-orange" data-speed="0.8">
-                    <About/>
-                </div>
-                <div className="box box-c gradient-purple" data-speed="0.8">
-                    <OurService/>
-                </div>
-                <div className="box box-d gradient-purple" data-speed="0.8">
-                    <Project/>
-                </div>
-                <div className="box box-e gradient-purple" data-speed="0.8">
-                    <Testimonial/>
-                </div>
-                <div className="line"></div>
+        <>
+
+            {/* Navbar with dynamic visibility */}
+            <div
+                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                <Navbar/>
             </div>
-        </div>
+
+            {/* Smooth scrolling content */}
+            <div id="smooth-wrapper" ref={main}>
+                <div id="smooth-content">
+                    <div className="box box-a gradient-blue" data-speed="0.5">
+                        <Hero/>
+                    </div>
+                    <div className="box box-b gradient-orange" data-speed="0.8">
+                        <About/>
+                    </div>
+                    <div className="box box-c gradient-purple" data-speed="0.8">
+                        <OurService/>
+                    </div>
+                    <div className="box box-d gradient-purple" data-speed="0.8">
+                        <Project/>
+                    </div>
+                    <div className="box box-e gradient-purple" data-speed="0.8">
+                        <Testimonial/>
+                    </div>
+                    <div className="box box-f gradient-purple" data-speed="1.8">
+                        <Footer/>
+                    </div>
+                    <div className="line"></div>
+                </div>
+            </div>
+        </>
     );
 };
 
