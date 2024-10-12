@@ -24,7 +24,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.config({ trialWarn: false });
 const Home = () => {
     const main = useRef();
-    const smoother = useRef();
+    //const smoother = useRef();
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);

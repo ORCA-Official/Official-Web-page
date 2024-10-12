@@ -2,8 +2,8 @@
 import React, {useEffect, useState} from 'react';
 
 // ** GSAP Imports
-import {gsap} from 'gsap';
-import {ScrollTrigger} from 'gsap/ScrollTrigger';
+//import {gsap} from 'gsap';
+//import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 // ** Assets Imports
 import videoUrl from "../../assets/video/bg.mp4";
