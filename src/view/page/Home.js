@@ -45,7 +45,7 @@ const Home = () => {
         };
     }, [scrollPosition]);
 
-    useGSAP(
+    /*useGSAP(
         () => {
             // Initialize ScrollSmoother
             smoother.current = ScrollSmoother.create({
@@ -160,14 +160,14 @@ const Home = () => {
 
         },
         { scope: main }
-    );
+    );*/
 
     return (
         <>
 
             {/* Navbar with dynamic visibility */}
             <div
-                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
                 <Navbar/>
             </div>
 
