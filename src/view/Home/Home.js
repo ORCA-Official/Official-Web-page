@@ -8,16 +8,18 @@ import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 
 // ** Custom Imports
-import Hero from "../../components/HeroSection";
-import OurService from "../../components/OurService";
-import About from "../../components/About";
-import Project from "../../components/Project";
+import Navbar from "../../components/core/Navbar";
+import HeroSection from "../../components/Home/HeroSection";
+import About from "../../components/Home/About";
+import OurService from "../../components/Home/OurService";
+import Testimonial from "../../components/Home/Testimonial";
+import Footer from "../../components/core/Footer";
+import Project from "../../components/Home/Project";
+
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
-import Testimonial from "../../components/Testimonial";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/core/Navbar";
+
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
@@ -176,7 +178,7 @@ const Home = () => {
             <div id="smooth-wrapper" ref={main}>
                 <div id="smooth-content">
                     <div className="box box-a gradient-blue" data-speed="0.5">
-                        <Hero/>
+                        <HeroSection/>
                     </div>
                     <div className="box box-b gradient-orange" data-speed="0.8">
                         <About/>
