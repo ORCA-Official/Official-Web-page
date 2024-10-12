@@ -5,12 +5,12 @@ const Footer = () => {
         <>
             <div className="relative py-10 pt-50 bg-gray-50 sm:pt-16 lg:pt-10">
                 <div className="px-22 mx-auto sm:px-6 lg:px-4 max-w-6xl">
-                    <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
+                    <div className="grid grid-cols-1 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
                         <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
                             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">ORCA</p>
 
 
-                            <ul className="absolute right-5 flex flex-col space-y-6 sm:space-y-8 md:space-y-10 lg:top-[10%]">
+                            <ul className="absolute right-8 flex flex-col space-y-6 sm:space-y-8 md:space-y-10 lg:top-[10%]">
                                 <li>
                                     <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600 focus:bg-gray-600">
                                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
