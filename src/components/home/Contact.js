@@ -1,6 +1,6 @@
 import React from 'react';
-import PageTitles from "./core/PageTitles";
-import Footer from "./Footer";
+import PageTitles from "../core/PageTitles";
+
 
 
 
@@ -68,8 +68,6 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* Footer Component */}
-            <Footer />
         </>
     );
 }
