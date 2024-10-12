@@ -8,15 +8,15 @@ import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 
 // ** Custom Imports
-import Hero from "../../components/HeroSection";
-import OurService from "../../components/OurService";
-import About from "../../components/About";
-import Project from "../../components/Project";
+import Hero from "../../components/home/HeroSection";
+import OurService from "../../components/home/OurService";
+import About from "../../components/home/About";
+import Project from "../../components/home/Project";
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
-import Testimonial from "../../components/Testimonial";
-import Footer from "../../components/Footer";
+import Testimonial from "../../components/home/Testimonial";
+import Footer from "../../components/core/Footer";
 import Navbar from "../../components/core/Navbar";
 
 

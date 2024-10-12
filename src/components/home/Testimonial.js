@@ -1,9 +1,9 @@
 import React from 'react';
-import '../assets/css/styles.css';
+import '../../assets/css/styles.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { HomeTitles } from './core/HomeTitles';
+import { HomeTitles } from '../core/HomeTitles';
 
 const Testimonial = () => {
     const settings = {

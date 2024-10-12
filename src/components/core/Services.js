@@ -42,8 +42,8 @@ const ServiceCard = ({service, index}) => {
         >
             <div className={'w-full h-full'}>
                 <div className={`w-full flex justify-between font-Lato items-center p-2 ${clicked ? 'text-white bg-black' : 'hover:text-white hover:bg-black'}`}>
-                    <div className={'text-xl'}>
-                        <span className={'text-lg'}>{(index + 1).toString().padStart(2, '0')}. </span>
+                    <div className={'md:text-xl text-sm'}>
+                        <span className={'md:text-lg text-xs'}>{(index + 1).toString().padStart(2, '0')}. </span>
                         <span>{service.name}</span>
                     </div>
 
@@ -57,7 +57,7 @@ const ServiceCard = ({service, index}) => {
                         ))}
                     </div>
 
-                    <div className={'pt-4 pb-2'}>
+                    <div className={'pt-4 pb-2 md:text-lg text-xs'}>
                         <p>{service.details}</p>
                     </div>
                 </div>

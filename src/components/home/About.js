@@ -1,6 +1,6 @@
 import React from 'react';
-import images from "../assets/images/image.png";
-import {HomeTitles} from "./core/HomeTitles";
+import images from "../../assets/images/image.png";
+import {HomeTitles} from "../core/HomeTitles";
 
 
 const About = () => {

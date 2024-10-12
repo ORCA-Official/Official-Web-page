@@ -1,7 +1,7 @@
 import React from 'react';
-import carbackground from '../assets/images/carbackground01.png';
+import carbackground from '../../assets/images/carbackground01.png';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { HomeTitles } from './core/HomeTitles';
+import { HomeTitles } from '../core/HomeTitles';
 
 const Project = () => {
     const backgroundStyle = {
@@ -12,8 +12,8 @@ const Project = () => {
     };
 
     return (
-        <>
-            <HomeTitles title={'Project'} number={2} reverse={true} />
+        <div className={'bg-black'}>
+            <HomeTitles title={'Project'} number={2} reverse={true} dark={true} />
 
             {/* Background section for project details */}
             <div style={backgroundStyle} className="relative text-white">
@@ -62,7 +62,7 @@ const Project = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

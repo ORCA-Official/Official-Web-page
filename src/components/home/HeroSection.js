@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
-import videoUrl from "../assets/video/bg.mp4";
-import logo from '../assets/images/oa.png'
-import '../assets/css/hero-styles.css'
+import videoUrl from "../../assets/video/bg.mp4";
+import logo from '../../assets/images/oa.png'
+import '../../assets/css/hero-styles.css'
 import {motion} from 'framer-motion';
 import {BsArrowUpRight} from "react-icons/bs";
 
@@ -87,9 +87,20 @@ const HeroSection = () => {
                     >
                         Building Digital Solutions for the Future.
                     </motion.p>
+
+                    <div className={'flex h-max justify-end'}>
+                        <button className={'md:text-lg text-xs mr-6 md:px-6 md:py-2 px-2 py-1 border border-white text-white md:rounded-md rounded-sm'}>
+                            Start Your Project
+                        </button>
+                        <button
+                            className={'md:text-lg text-xs w-max flex items-center md:gap-x-2 md:py-2 py-1 border-b border-b-white text-white'}>
+                            <span>Explore Our Services</span>
+                            <BsArrowUpRight size={14}/>
+                        </button>
+                    </div>
                 </div>
 
-                <div className={'absolute bottom-0 w-full'}>
+                <div className={'md:block hidden absolute bottom-0 w-full'}>
                     <div className={'w-full flex justify-between px-10 pb-4'}>
                         <div className={''}>
                             <img src={logo} alt="logo" className={'w-16'}/>
