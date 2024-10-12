@@ -18,6 +18,7 @@ import Navbar from "../../components/core/Navbar";
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
+import Contact from "../../components/home/Contact";
 
 // ** GSAP Configs
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
@@ -189,6 +190,9 @@ const Home = () => {
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
                         <Testimonial/>
+                    </div>
+                    <div className="box box-e gradient-purple" data-speed="0.8">
+                        <Contact/>
                     </div>
                     <div className="box box-f gradient-purple" data-speed="1.8">
                         <Footer/>
