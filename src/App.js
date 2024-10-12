@@ -1,14 +1,12 @@
 import React from 'react';
-import Home from "./view/page/Home";
-import Contact from "./components/Contact";
+import Home from "./view/Home/Home";
 
 function App() {
 
 
     return (
         <div>
-            {/*<Home />*/}
-            <Contact/>
+            <Home />
         </div>
     );
 }

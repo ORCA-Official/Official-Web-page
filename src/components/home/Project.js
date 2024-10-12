@@ -1,7 +1,7 @@
 import React from 'react';
-import carbackground from '../assets/images/carbackground01.png';
+import carbackground from '../../assets/images/carbackground01.png';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { HomeTitles } from './core/HomeTitles';
+import { HomeTitles } from '../core/HomeTitles';
 
 const Project = () => {
     const backgroundStyle = {
