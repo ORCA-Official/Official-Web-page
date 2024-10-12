@@ -9,12 +9,12 @@ import { useGSAP } from '@gsap/react';
 
 // ** Custom Imports
 import Navbar from "../../components/core/Navbar";
-import HeroSection from "../../components/Home/HeroSection";
-import About from "../../components/Home/About";
-import OurService from "../../components/Home/OurService";
-import Testimonial from "../../components/Home/Testimonial";
+import HeroSection from "../../components/home/HeroSection";
+import About from "../../components/home/About";
+import OurService from "../../components/home/OurService";
+import Testimonial from "../../components/home/Testimonial";
 import Footer from "../../components/core/Footer";
-import Project from "../../components/Home/Project";
+import Project from "../../components/home/Project";
 
 
 // ** Styles Imports
