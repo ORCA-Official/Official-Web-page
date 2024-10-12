@@ -28,7 +28,7 @@ const Contact = () => {
                         <h3 className="text-2xl font-semibold mb-4">Chat Now</h3>
 
                         {/* Button */}
-                        <button className="bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-300 transition">
+                        <button className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
                             Start Chat
                         </button>
 
@@ -43,7 +43,7 @@ const Contact = () => {
                         </div>
                         <h3 className="text-2xl font-semibold mb-4">Email Us</h3>
                         {/* Button */}
-                        <button className="bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-300 transition">
+                        <button className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
                             Send Email
                         </button>
                         <p className="text-gray-400 mb-6 mt-8">Get A Response Soon! Reach Us Anytime!</p>
@@ -58,7 +58,7 @@ const Contact = () => {
                         <h3 className="text-2xl font-semibold mb-4">Call Us</h3>
 
                         {/* Button */}
-                        <button className="bg-white text-black font-semibold py-2 px-4 rounded hover:bg-gray-300 transition">
+                        <button className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
                             Make a Call
                         </button>
 
