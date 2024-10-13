@@ -1,7 +1,7 @@
 import React from 'react';
-import carbackground from '../assets/images/carbackground01.png';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import { HomeTitles } from './core/HomeTitles';
+import carbackground from '../../assets/images/carbackground01.png'; // Background image
+import { HomeTitles } from '../../components/core/HomeTitles'; // Custom title component
+import ProjectCard from '../../components/project/ProjectCard'; // ProjectCard component
 
 const Project = () => {
     const backgroundStyle = {
@@ -11,59 +11,33 @@ const Project = () => {
         minHeight: '100vh',
     };
 
+    // Example projects array
+    const projects = [
+        {
+            title: "CAR RENTAL SYSTEM",
+            stack: ["HTML", "CSS", "JavaScript", "Spring Boot", "JWT", "Bootstrap"],
+            description: "A car rental system built with HTML/CSS, JavaScript, and Bootstrap front-end for responsive design. The backend uses Spring Boot with JWT for secure authentication. Allows users to easily browse cars, view details, and manage bookings with admin handling car listings and bookings.",
+            githubLink: "https://github.com/your-car-rental-repo",
+            liveLink: "https://car-rental-live.com",
+        },
+        // Add more projects if needed
+    ];
+
     return (
-        <>
-            <HomeTitles title={'Project'} number={2} />
+        <div className={'bg-black'}>
+            <HomeTitles title={'Project'} number={2} reverse={true} dark={true} />
 
             {/* Background section for project details */}
             <div style={backgroundStyle} className="relative text-white">
                 <div className="container mx-auto px-4 sm:px-8 py-16">
-
-                    {/* Project Title */}
-                    <h1 className="text-4xl font-bold mb-6 font-montserrat tracking-[0.2em]">CAR RENTAL SYSTEM</h1>
-
-                    {/* Technology Stack */}
-                    <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
-                        {['HTML', 'CSS', 'JavaScript', 'Spring Boot', 'JWT', 'Bootstrap'].map((tech, index) => (
-                            <span
-                                key={index}
-                                className="inline-flex items-center gap-2 border rounded-md border-white px-4 sm:px-6 py-2 text-sm sm:text-base">
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-
-                    {/* Project Description */}
-                    <p className="text-white font-medium max-w-xl sm:max-w-3xl mb-8 leading-relaxed text-sm sm:text-base">
-                        A car rental system built with HTML/CSS, JavaScript, and Bootstrap front-end for responsive design.
-                        The backend uses Spring Boot with JWT for secure authentication. Allows users to easily browse cars,
-                        view details, and manage bookings with admin handling car listings and bookings.
-                    </p>
-
-                    {/* Live Website & GitHub Links */}
-                    <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                        <a
-                            href="https://github.com/your-github-repo" // Replace with your GitHub link
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-6 py-2"
-                        >
-                            <FaGithub size={32} /> {/* GitHub Icon */}
-                        </a>
-
-                        <a
-                            href="#"
-                            className="inline-flex items-center gap-2 text-white border-b border-white pb-1
-                                hover:text-gray-300 transition-all duration-300 text-sm sm:text-base"
-                        >
-                            Live Website
-                            <FaExternalLinkAlt className="w-4 h-4" />
-                        </a>
-                    </div>
+                    {/* Iterate through projects */}
+                    {projects.map((project, index) => (
+                        <ProjectCard key={index} project={project} index={index} />
+                    ))}
                 </div>
             </div>
-        </>
+        </div>
     );
-};
+}
 
-export default Project;
+    export default Project;

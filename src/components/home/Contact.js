@@ -1,5 +1,6 @@
 import React from 'react';
 import PageTitles from "../core/PageTitles";
+import {HomeTitles} from "../core/HomeTitles";
 
 
 
@@ -7,16 +8,17 @@ import PageTitles from "../core/PageTitles";
 const Contact = () => {
     return (
         <>
-            <PageTitles bgtitle={'Get In Touch'} title={'Contact Us'}  dark={false}/>
-            {/*<HomeTitles title={'CONTACT US'} number={4} reverse={true}/>*/}
+           {/* <PageTitles bgtitle={'Get In Touch'} title={'Contact Us'}  dark={false}/>*/}
+
+            <HomeTitles title={'CONTACT US'} number={4} reverse={true}/>
 
             <div className="relative text-center bg-black py-20 text-white min-h-screen flex flex-col items-center justify-center">
-                {/* Background Title */}
+               {/*  Background Title */}
                 <h1 className="absolute inset-x-0 top-16 text-8xl font-bold text-white opacity-10">
                     GET IN TOUCH
                 </h1>
 
-                {/* Foreground Title */}
+              {/*   Foreground Title*/}
                 <h2 className="relative z-10 text-4xl font-bold mb-16">CONTACT US</h2>
 
                 {/* Contact Options */}
