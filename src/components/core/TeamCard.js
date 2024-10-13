@@ -1,6 +1,4 @@
 import React from 'react';
-import img1 from "../../assets/images/people.jpg";
-import I from "../../assets/images/aboutBG.png";
 
 
 

@@ -22,6 +22,7 @@ import '../../assets/css/scroller.css';
 // ** WhatsApp Chat Button Imports
 import whatsappIcon from "../../assets/images/whatsapp.png";
 
+
 // ** GSAP Configs
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 gsap.config({ trialWarn: false });

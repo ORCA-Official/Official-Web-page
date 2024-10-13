@@ -29,7 +29,7 @@ const WhoWeAre = () => {
     };
 
     return (
-        <div className={`overflow-hidden w-full bg-black bg-cover bg-center md:h-screen h-max`} style={backgroundStyle}>
+        <div className={`overflow-hidden w-full bg-black bg-cover bg-center md:h-screen h-max pt-16`} style={backgroundStyle}>
 
             <PageTitles
                 dark={true}            // Use `true` if you want the dark mode
