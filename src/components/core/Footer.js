@@ -3,14 +3,13 @@ import React from 'react';
 const Footer = () => {
     return(
         <>
-            <div className="relative py-10 pt-50 bg-gray-50 sm:pt-16 lg:pt-10">
+            <div className="relative py-10 pt-50 bg-gray-50 dark:bg-gray-900 sm:pt-16 lg:pt-10">
                 <div className="px-22 mx-auto sm:px-6 lg:px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-                        <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
+                        <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8 lg:pl-6">  {/* Added lg:pl-6 to move left */}
                             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">ORCA</p>
 
-
-                            <ul className="absolute right-5 flex flex-col space-y-6 sm:space-y-8 md:space-y-10 lg:top-[10%]">
+                            <ul className="absolute right-8 flex flex-col space-y-6 sm:space-y-8 md:space-y-10 lg:top-[10%]">
                                 <li>
                                     <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600 focus:bg-gray-600">
                                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -22,7 +21,7 @@ const Footer = () => {
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600 focus:bg-gray-600">
+                                    <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600">
                                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
                                         </svg>
@@ -30,7 +29,7 @@ const Footer = () => {
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600 focus:bg-gray-600">
+                                    <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-gray-600">
                                         <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
                                             <circle cx="16.806" cy="7.207" r="1.078"></circle>
@@ -57,55 +56,55 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
+                            <p className="text-sm font-semibold tracking-widest text-gray-300 uppercase">Company</p>
 
                             <ul className="mt-2 space-y-4">
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> About </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600"> About </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Team </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Team </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Project </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Project </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Career </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Career </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Contact Us </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Contact Us </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div>
-                            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Useful Links</p>
+                            <p className="text-sm font-semibold tracking-widest text-gray-300 uppercase">Useful Links</p>
 
                             <ul className="mt-6 space-y-4">
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Privacy Policy </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Privacy Policy </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Terms & Service</a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Terms & Service</a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Cookie Policy </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Cookie Policy </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Cookie Settings </a>
+                                    <a href="#" title="" className="flex text-base text-gray-400 transition-all duration-200 hover:text-gray-600 focus:text-gray-600"> Cookie Settings </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="col-span-2 md:col-span-1 lg:col-span-2 lg:pl-8">
-                            <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">Subscribe to newsletter</p>
+                            <p className="text-sm font-semibold tracking-widest text-gray-300 uppercase">Subscribe to newsletter</p>
 
                             <form action="#" method="POST" className="mt-6">
                                 <div>
@@ -120,7 +119,7 @@ const Footer = () => {
 
                     <hr className="mt-16 mb-10 border-gray-200" />
 
-                    <p className="text-sm text-center text-gray-600">© 2024 ORCA Tech Solutions. All Rights Reserved</p>
+                    <p className="text-sm text-center text-gray-300">© 2024 ORCA Tech Solutions. All Rights Reserved</p>
                 </div>
             </div>
         </>
