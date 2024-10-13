@@ -52,8 +52,15 @@ const Navbar = () => {
                     transition={{duration: 3, delay: 1.5}}
                 >
                     <button
-                        className="hidden md:block px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800">
-                        Contact Us
+                        className="hidden md:block px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800"
+                        onClick={() => {
+                            const subjectPart = "Inquiry";
+                            const autoSetPart = "Some additional info";
+                            const email = 'orcaofficialse@gmail.com';
+                            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subjectPart + " - " + autoSetPart)}`;
+                        }}
+                     >
+                        Email Us
                     </button>
                 </motion.div>
                 <div className="flex md:hidden">

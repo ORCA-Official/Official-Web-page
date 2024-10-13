@@ -1,14 +1,13 @@
 import React from 'react';
-import About from "./view/Home/About";
-import Footer from "./components/core/Footer"
+import Home from "./view/Home/Home";
+import Project from "./view/project/Project";
 
 function App() {
 
 
     return (
         <div>
-            <About />
-            <Footer />
+            <Home/>
         </div>
     );
 }
