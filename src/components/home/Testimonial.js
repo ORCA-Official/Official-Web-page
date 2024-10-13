@@ -45,7 +45,7 @@ const Testimonial = () => {
             rating: 5,
         },
         {
-            name: "Freelancer",
+            name: "Adam Smith",
             role: "Tech Enthusiast",
             feedback:
                 "A car rental system built with React and Node.js provides robust functionality, including user-friendly interfaces, dynamic data, and efficient backend services.",
