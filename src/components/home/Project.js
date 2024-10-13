@@ -12,8 +12,8 @@ const Project = () => {
     };
 
     return (
-        <>
-            <HomeTitles title={'Project'} number={2} reverse={true} />
+        <div className={'bg-black'}>
+            <HomeTitles title={'Project'} number={2} reverse={true} dark={true} />
 
             {/* Background section for project details */}
             <div style={backgroundStyle} className="relative text-white">
@@ -62,7 +62,7 @@ const Project = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

@@ -99,11 +99,11 @@
 }
 
 .gradient-orange {
-    background: linear-gradient(135deg, #ffffff, #ebd5e8);
+    /*background: linear-gradient(135deg, #ffffff, #ebd5e8);*/
 }
 
 .gradient-purple {
-    background: linear-gradient(135deg, #ffffff, #ebd5e8);
+    /*background: linear-gradient(135deg, #ffffff, #ebd5e8);*/
     z-index: 10;
 }
 
@@ -118,6 +118,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 
 
 

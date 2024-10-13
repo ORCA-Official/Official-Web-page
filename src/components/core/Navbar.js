@@ -11,6 +11,9 @@ import oa_dark from '../../assets/images/oa_dark.png'
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 
+// ** Frame Motion Imports
+import {motion} from 'framer-motion';
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,26 +22,44 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white shadow-sm navBar">
+        <motion.nav
+            initial={{width: '0'}}
+            animate={{width: '100%'}}
+            transition={{duration: 0.5, delay: 1}}
+            className="bg-white shadow-sm navBar h-max overflow-hidden">
             <div className="flex items-center justify-between px-8 py-2">
                 <div className="text-2xl font-bold text-black">
                     {/*ORCA*/}
                     <img src={oa_dark} className={'w-10'} alt=""/>
                 </div>
-                <ul className="hidden md:flex space-x-6 text-md text-black font-montserrat">
-                    <li className="hover:text-black cursor-pointer">Home</li>
-                    <li className="hover:text-black cursor-pointer">About Us</li>
-                    <li className="hover:text-black cursor-pointer">Projects</li>
-                    <li className="hover:text-black cursor-pointer">Career</li>
-                    <li className="hover:text-black cursor-pointer">Contacts</li>
-                </ul>
-                <button className="hidden md:block px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800">
-                    Contact Us
-                </button>
+
+                <motion.div
+                    initial={{display: 'none'}}
+                    animate={{display: 'block'}}
+                    transition={{duration: 3, delay: 1.5}}
+                >
+                    <ul className="hidden md:flex space-x-6 text-md text-black font-montserrat">
+                        <li className="hover:text-black cursor-pointer">Home</li>
+                        <li className="hover:text-black cursor-pointer">About Us</li>
+                        <li className="hover:text-black cursor-pointer">Projects</li>
+                        <li className="hover:text-black cursor-pointer">Career</li>
+                        <li className="hover:text-black cursor-pointer">Contacts</li>
+                    </ul>
+                </motion.div>
+                <motion.div
+                    initial={{display: 'none'}}
+                    animate={{display: 'block'}}
+                    transition={{duration: 3, delay: 1.5}}
+                >
+                    <button
+                        className="hidden md:block px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800">
+                        Contact Us
+                    </button>
+                </motion.div>
                 <div className="flex md:hidden">
                     <button id="hamburger" onClick={toggleMenu}>
-                        <CiMenuBurger size={22} className={`toggle ${isOpen ? 'hidden' : 'block'}`} />
-                        <IoMdClose size={22} className={`toggle ${isOpen ? 'block' : 'hidden'}`} />
+                        <CiMenuBurger size={22} className={`toggle ${isOpen ? 'hidden' : 'block'}`}/>
+                        <IoMdClose size={22} className={`toggle ${isOpen ? 'block' : 'hidden'}`}/>
                     </button>
                 </div>
             </div>
@@ -53,7 +74,7 @@ const Navbar = () => {
                     Contact Us
                 </button>
             </ul>
-        </nav>
+        </motion.nav>
     );
 };
 
