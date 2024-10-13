@@ -5,7 +5,7 @@ const ProjectCard = ({ project, index }) => {
     return (
         <div
             className={`transition-all duration-300 ease-in-out h-max w-full flex-grow-0
-            ${index < 2 ? "" : ""}`} // Remove border classes here
+            ${index < 2 ? "" : ""}`}
             style={{
                 backgroundImage: `url(../../assets/images/carbackground01.png)`, // Update the image URL accordingly
                 backgroundSize: 'cover',
@@ -16,8 +16,9 @@ const ProjectCard = ({ project, index }) => {
             }}
         >
             <div className={"w-full h-full"}>
+
                 {/* Project Title */}
-                <div className={`w-full flex justify-between font-Lato items-center p-2`}>
+                <div className={`w-full flex justify-start font-Lato items-center p-2`}>
                     <div className={"text-4xl font-bold mb-6 font-montserrat tracking-[0.2em]"}>
                         <span>{project.title}</span>
                     </div>
@@ -38,6 +39,7 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 {/* GitHub and Live Website Links */}
+
                 <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-4">
                     {/* GitHub Link */}
                     <a

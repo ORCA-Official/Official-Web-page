@@ -24,7 +24,7 @@ const Project = () => {
     ];
 
     return (
-        <div>
+        <div className={'bg-black'}>
             <HomeTitles title={'Project'} number={2} reverse={true} dark={true} />
 
             {/* Background section for project details */}
@@ -38,6 +38,6 @@ const Project = () => {
             </div>
         </div>
     );
-};
+}
 
-export default Project;
+    export default Project;
