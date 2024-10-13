@@ -7,7 +7,8 @@ const ProjectCard = ({ project, index }) => {
             className={`transition-all duration-300 ease-in-out h-max w-full flex-grow-0
             ${index < 2 ? "" : ""}`}
             style={{
-                backgroundImage: `url(../../assets/images/carbackground01.png)`, // Update the image URL accordingly
+                //backgroundImage: `url(../../assets/images/carbackground01.png)`, // Update the image URL accordingly
+                //backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url(${project.backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '20px',

@@ -10,19 +10,20 @@ const Testimonial = () => {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 2,
+        centerPadding: "10px",
+        slidesToShow: 3,
+        slidesToScroll: 0.1,
         speed: 500,
-        autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
         focusOnSelect: true,
+        cssEase: "ease",
         responsive: [
             {
                 breakpoint: 1024, // Tablets and below
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: "40px",
+                    centerPadding: "25%",
                 },
             },
             {
@@ -65,7 +66,7 @@ const Testimonial = () => {
             <HomeTitles title={'Testimonial'} number={3} />
 
             {/* Slider Section */}
-            <div className="slider-container mt-4">
+            <div className="slider-container pt-8">
                 <Slider {...settings}>
                     {/* Map through the testimonials array */}
                     {testimonials.map((testimonial, index) => (

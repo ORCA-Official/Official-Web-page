@@ -18,7 +18,6 @@ import Navbar from "../../components/core/Navbar";
 
 // ** Styles Imports
 import '../../assets/css/scroller.css';
-import Contact from "../../components/home/Contact";
 
 // ** WhatsApp Chat Button Imports
 import whatsappIcon from "../../assets/images/whatsapp.png";
@@ -82,11 +81,9 @@ const Home = () => {
                         <Testimonial />
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
-                        <Contact />
-                    </div>
-                    <div className="box box-f gradient-purple" data-speed="1.8">
                         <Footer />
                     </div>
+
                     <div className="line"></div>
                 </div>
             </div>
