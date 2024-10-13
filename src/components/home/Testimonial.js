@@ -10,19 +10,21 @@ const Testimonial = () => {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 2,
+        centerPadding: "10px",
+        slidesToShow: 3,
+        slidesToScroll: 0.1,
         speed: 500,
         autoplay: true,
         autoplaySpeed: 3000,
         dots: true,
         focusOnSelect: true,
+        cssEase: "ease",
         responsive: [
             {
                 breakpoint: 1024, // Tablets and below
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: "40px",
+                    centerPadding: "25%",
                 },
             },
             {
@@ -40,10 +42,11 @@ const Testimonial = () => {
             <HomeTitles title={'Testimonial'} number={3} />
 
             {/* Slider Section */}
-            <div className="slider-container mt-4">
+            <div className="slider-container pt-8">
                 <Slider {...settings}>
                     <div className="p-2 flex justify-center">
-                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-xl font-bold sm:text-lg">KARA STRONG</h3>
                             <p className="text-sm italic">CEO Technara</p>
                             <p className="mt-4 text-base sm:text-sm">
@@ -56,7 +59,8 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div className="p-2 flex justify-center">
-                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold sm:text-base">Freelancer</h3>
                             <p className="text-sm italic">Tech Enthusiast</p>
                             <p className="mt-4 sm:text-sm">
@@ -69,7 +73,50 @@ const Testimonial = () => {
                         </div>
                     </div>
                     <div className="p-2 flex justify-center">
-                        <div id="back" className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                            <h3 className="text-lg font-bold sm:text-base">Tech Leader</h3>
+                            <p className="text-sm italic">Senior Developer</p>
+                            <p className="mt-4 sm:text-sm">
+                                Using a variety of frontend and backend technologies, I was able to streamline the
+                                car rental system and improve performance.
+                            </p>
+                            <div className="mt-4">
+                                <span className="text-yellow-500">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-2 flex justify-center">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                            <h3 className="text-lg font-bold sm:text-base">Tech Leader</h3>
+                            <p className="text-sm italic">Senior Developer</p>
+                            <p className="mt-4 sm:text-sm">
+                                Using a variety of frontend and backend technologies, I was able to streamline the
+                                car rental system and improve performance.
+                            </p>
+                            <div className="mt-4">
+                                <span className="text-yellow-500">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-2 flex justify-center">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
+                            <h3 className="text-lg font-bold sm:text-base">Tech Leader</h3>
+                            <p className="text-sm italic">Senior Developer</p>
+                            <p className="mt-4 sm:text-sm">
+                                Using a variety of frontend and backend technologies, I was able to streamline the
+                                car rental system and improve performance.
+                            </p>
+                            <div className="mt-4">
+                                <span className="text-yellow-500">★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-2 flex justify-center">
+                        <div id="back"
+                             className="testimonial-card bg-black text-white p-8 rounded-lg shadow-lg w-full h-80 max-w-md">
                             <h3 className="text-lg font-bold sm:text-base">Tech Leader</h3>
                             <p className="text-sm italic">Senior Developer</p>
                             <p className="mt-4 sm:text-sm">
