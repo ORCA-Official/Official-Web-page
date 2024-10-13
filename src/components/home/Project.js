@@ -57,7 +57,13 @@ const Project = () => {
                 pagination={{
                     clickable: true,
                 }}
-                mousewheel={true}
+                //mousewheel={true}
+                mousewheel={{
+                    forceToAxis: true, // Force scroll to be vertical
+                    releaseOnEdges: true, // Release scroll on edges
+                    invert: false, // Invert the scroll direction
+                    sensitivity: 0, // Adjust sensitivity of the scroll
+                }}
                 modules={[Pagination, Mousewheel]}
                 className="mySwiper"
                 style={{height: '100vh'}} // Ensure it takes full height
