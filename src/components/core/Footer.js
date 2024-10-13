@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return(
         <>
-            <div className="relative py-10 pt-50 bg-gray-50 dark:bg-gray-900 sm:pt-16 lg:pt-10">
+            <div className="relative py-10 pt-50 bg-gray-50 dark:bg-black sm:pt-16 lg:pt-10">
                 <div className="px-22 mx-auto sm:px-6 lg:px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
                         <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8 lg:pl-6">  {/* Added lg:pl-6 to move left */}

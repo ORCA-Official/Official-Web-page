@@ -9,7 +9,9 @@ const WhatWeDo = () => {
                 title="OUR SERVICES"
                 bgtitle="what we do"
             />
+            <div className={"py-4 px-12"}>
             <Services/>
+            </div>
 
         </div>
     )
