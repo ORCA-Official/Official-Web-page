@@ -1,12 +1,14 @@
 import React from 'react';
-import Home from "./view/Home/Home";
+import About from "./view/Home/About";
+import Footer from "./components/core/Footer"
 
 function App() {
 
 
     return (
         <div>
-            <Home />
+            <About />
+            <Footer />
         </div>
     );
 }

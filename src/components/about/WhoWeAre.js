@@ -1,7 +1,6 @@
 import React from "react";
 import PageTitles from "../core/PageTitles";
 import I from "../../assets/images/aboutBG.png";
-import Footer from "../Footer";
 
 const WhoWeAre = () => {
 

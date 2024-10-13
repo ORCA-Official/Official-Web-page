@@ -1,5 +1,6 @@
 import React from "react";
 import PageTitles from "../core/PageTitles";
+import Services from "../core/Services";
 const WhatWeDo = () => {
     return (
         <div>
@@ -8,6 +9,8 @@ const WhatWeDo = () => {
                 title="OUR SERVICES"
                 bgtitle="what we do"
             />
+            <Services/>
+
         </div>
     )
 }

@@ -2,7 +2,6 @@ import React from "react";
 import PageTitles from "../core/PageTitles";
 import TeamCard from "../core/TeamCard";
 import I from "../../assets/images/aboutBG.png";
-import People from "../../assets/images/people.jpg";
 import img1 from "../../assets/images/people.jpg";
 
 const MindsBehind = () => {
