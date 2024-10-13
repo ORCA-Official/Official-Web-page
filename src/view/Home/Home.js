@@ -13,7 +13,7 @@ import OurService from "../../components/home/OurService";
 import About from "../../components/home/About";
 import Project from "../../components/home/Project";
 import Testimonial from "../../components/home/Testimonial";
-import Footer from "../../components/core/Footer";
+import FooterBlack from "../../components/core/FooterBlack";
 import Navbar from "../../components/core/Navbar";
 
 // ** Styles Imports
@@ -81,7 +81,7 @@ const Home = () => {
                         <Testimonial />
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
-                        <Footer />
+                        <FooterBlack />
                     </div>
 
                     <div className="line"></div>
