@@ -1,6 +1,7 @@
 import React from 'react';
 import About from "./view/Home/About";
 import Footer from "./components/core/Footer"
+import Home from "./view/Home/Home"
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     return (
         <div>
             <About />
-            <Footer />
+            <Footer/>
         </div>
     );
 }

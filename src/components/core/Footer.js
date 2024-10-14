@@ -1,12 +1,13 @@
 import React from 'react';
+import {FaFacebook, FaGithub, FaLinkedinIn, FaWhatsapp} from "react-icons/fa";
 
 const Footer = () => {
-    return(
-        <>
+    return (
+        /*<>
             <div className="relative py-10 pt-50 bg-gray-50 dark:bg-black sm:pt-16 lg:pt-10">
                 <div className="px-22 mx-auto sm:px-6 lg:px-4 max-w-6xl">
                     <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-                        <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8 lg:pl-6">  {/* Added lg:pl-6 to move left */}
+                        <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8 lg:pl-6">  {/!* Added lg:pl-6 to move left *!/}
                             <p className="text-sm font-semibold tracking-widest text-gray-400 uppercase">ORCA</p>
 
                             <ul className="absolute right-8 flex flex-col space-y-6 sm:space-y-8 md:space-y-10 lg:top-[10%]">
@@ -122,7 +123,88 @@ const Footer = () => {
                     <p className="text-sm text-center text-gray-300">© 2024 ORCA Tech Solutions. All Rights Reserved</p>
                 </div>
             </div>
-        </>
+        </>*/
+
+        <footer className="bg-black text-surface dark:text-white text-center lg:text-left">
+            <div className="container mx-auto p-6 lg:p-10">
+                <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
+
+                    {/* Newsletter Section (First on small screens, last on large screens) */}
+                    <div className="order-1 lg:order-4 w-full lg:w-auto">
+                        <h5 className="mb-4 font-bold uppercase">Subscribe to our newsletter</h5>
+                        <p className="text-white mb-4 p-4 bg-gray-900">
+                            Get the latest updates on tech trends, company news, and our latest projects delivered straight to your inbox.
+                        </p>
+                        <div className="relative w-full max-w-lg mx-auto lg:mx-0">
+                            <input
+                                className="w-full py-3 px-4 text-black border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                                type="email"
+                                name="email"
+                                placeholder="Enter Email"
+                                required
+                            />
+                            <button
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 py-2 px-4 bg-gray-900 text-white rounded-full hover:bg-gray-800">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* ORCA Section */}
+                    <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start">
+                        <h5 className="mb-4 font-bold uppercase">ORCA</h5>
+                    </div>
+
+                    {/* Company Links */}
+                    <div className="order-3 lg:order-2 flex flex-col items-center lg:items-start">
+                        <h5 className="mb-4 font-bold uppercase">Company</h5>
+                        <ul>
+                            <li><a href="#" className="text-white hover:underline">About Us</a></li>
+                            <li><a href="#" className="text-white hover:underline">Teams</a></li>
+                            <li><a href="#" className="text-white hover:underline">Projects</a></li>
+                            <li><a href="#" className="text-white hover:underline">Careers</a></li>
+                            <li><a href="#" className="text-white hover:underline">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Useful Links */}
+                    <div className="order-4 lg:order-3 flex flex-col items-center lg:items-start">
+                        <h5 className="mb-4 font-bold uppercase">Useful Links</h5>
+                        <ul>
+                            <li><a href="#" className="text-white hover:underline">Privacy Policy</a></li>
+                            <li><a href="#" className="text-white hover:underline">Terms of Service</a></li>
+                            <li><a href="#" className="text-white hover:underline">Cookie Policy</a></li>
+                            <li><a href="#" className="text-white hover:underline">Cookie Settings</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Social Media Icons */}
+                    <div className="order-5 lg:order-5 flex justify-center lg:justify-start space-x-4">
+                        <a href="#" className="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600">
+                            <FaLinkedinIn className="text-white" />
+                        </a>
+                        <a href="#" className="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600">
+                            <FaGithub className="text-white" />
+                        </a>
+                        <a href="#" className="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600">
+                            <FaFacebook className="text-white" />
+                        </a>
+                        <a href="#" className="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600">
+                            <FaWhatsapp className="text-white" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Copyright Section */}
+            <div className="bg-black/10 p-4 text-white text-center">
+                © 2023 Copyright:
+                <a href="https://tw-elements.com/" className="text-white hover:underline">TW Elements</a>
+            </div>
+        </footer>
+
+
+
     );
 }
 
