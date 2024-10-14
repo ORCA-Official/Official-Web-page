@@ -17,7 +17,7 @@ import {projectDetails} from "../../utils/projectDetails";
 const Project = () => {
 
     return (
-        <div className={'bg-black'}>
+        <div className={'bg-black pb-10'}>
             <HomeTitles title={'Project'} number={2} reverse={true} dark={true}/>
 
             {/* Swiper for vertical scrolling */}

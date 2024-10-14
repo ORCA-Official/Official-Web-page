@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { HomeTitles } from '../../components/core/HomeTitles'; // Custom title component
 import ProjectCard from '../../components/project/ProjectCard';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Mousewheel, Pagination} from "swiper/modules";

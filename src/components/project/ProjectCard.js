@@ -35,13 +35,13 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 {/* Project Description */}
-                <div className={"pt-4 pb-2 md:text-lg text-white font-medium max-w-xl sm:max-w-3xl mb-8 leading-relaxed text-sm sm:text-base"}>
+                <div className={"pt-4 pb-2 md:text-md text-white font-light max-w-xl sm:max-w-3xl mb-8 leading-relaxed text-sm sm:text-base"}>
                     <p>{project.description}</p>
                 </div>
 
                 {/* GitHub and Live Website Links */}
 
-                <div className="inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-4">
+                <div className={`inline-flex flex-col sm:flex-row items-start sm:items-center gap-6 mt-4 ${project.links ? '' : 'hidden'}`}>
                     {/* GitHub Link */}
                     <a
                         href={project.githubLink}

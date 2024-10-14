@@ -40,17 +40,17 @@ const FooterBlack = () => {
                 <div className={'lg:order-none order-2 lg:w-auto md:w-full lg:pb-0 pb-6'}>
                     <span className={'text-xl font-bold font-poppins'}>Subscribe to our Newsletter</span>
                     <p className={'text-sm mt-2 mb-4'}>Get the latest updates on tech trends, company news, and our latest projects delivered
-                        <br/> straight to your inbox.</p>
+                        <br className={'md:block hidden'} /> straight to your inbox.</p>
                     <div className={'border-white border h-max flex lg:w-max rounded-md overflow-hidden'}>
                         <input className={'bg-black p-2 lg:w-80 flex-grow'} type={'email'}/>
-                        <span className={'bg-white text-black p-2'}>Subscribe</span>
+                        <span className={'bg-white text-black p-2 cursor-pointer'}>Subscribe</span>
                     </div>
                 </div>
                 <div className={'lg:order-none order-5 flex xl:flex-col xl:justify-between justify-center xl:pb-10 pb-4 xl:gap-x-0 gap-x-4 xl:w-auto w-full'}>
-                    <FaLinkedinIn className={'text-gray-200'}/>
-                    <FaGithub className={'text-gray-200'}/>
-                    <FaFacebook className={'text-gray-200'}/>
-                    <FaWhatsapp className={'text-gray-200'}/>
+                    <FaLinkedinIn className={'text-gray-200 cursor-pointer'}/>
+                    <FaGithub className={'text-gray-200 cursor-pointer'}/>
+                    <FaFacebook className={'text-gray-200 cursor-pointer'}/>
+                    <FaWhatsapp className={'text-gray-200 cursor-pointer'}/>
                 </div>
             </div>
             <p className={'text-xs text-center'}>© 2024 Orca Tech Solutions. All Rights Reserved.</p>

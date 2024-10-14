@@ -24,7 +24,7 @@ const Contact = () => {
         };
     }, [scrollPosition]);
     return (
-        <>
+        <div className={'bg-black'}>
             {/* <PageTitles bgtitle={'Get In Touch'} title={'Contact Us'}  dark={false}/>*/}
             <div
                 className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
@@ -32,20 +32,13 @@ const Contact = () => {
             </div>
 
             <div className={'pt-16'}>
-                <PageTitles c bgtitle={'Get In Touch'} title={'Contact Us'} dark={false}/>
+                <PageTitles c bgtitle={'Get In Touch'} title={'Contact Us'} dark={true}/>
             </div>
 
             {/*<HomeTitles title={'CONTACT US'} number={4} reverse={true}/>*/}
 
             <div
-                className="relative text-center bg-black py-20 text-white min-h-screen flex flex-col items-center justify-center">
-                {/*  Background Title */}
-                <h1 className="absolute inset-x-0 top-16 text-8xl font-bold text-white opacity-10">
-                    GET IN TOUCH
-                </h1>
-
-                {/*   Foreground Title*/}
-                <h2 className="relative z-10 text-4xl font-bold mb-16">CONTACT US</h2>
+                className="relative text-center bg-black pb-20 text-white min-h-screen flex flex-col items-center justify-center">
 
                 {/* Contact Options */}
                 <div className="relative z-10 mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 justify-center">
@@ -105,7 +98,7 @@ const Contact = () => {
 
             <FooterBlack/>
 
-        </>
+        </div>
     );
 }
 
