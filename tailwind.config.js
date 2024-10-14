@@ -8,7 +8,7 @@ module.exports = {
       fontFamily:{
         montserrat: ['Montserrat', 'sans-serif'],
         Lato: ['Lato', 'sans-serif'],
-        poppins: ['Poppins", sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
         kumar: ['Kumar One', 'sans-serif']
       }
     },
