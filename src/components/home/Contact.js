@@ -3,9 +3,6 @@ import Navbar from "../core/Navbar";
 import PageTitles from "../core/PageTitles";
 import FooterBlack from "../core/FooterBlack";
 
-
-
-
 const Contact = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);

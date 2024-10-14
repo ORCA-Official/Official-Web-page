@@ -5,7 +5,8 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Mousewheel, Pagination} from "swiper/modules";
 import {projectDetails} from "../../utils/projectDetails";
 import Navbar from "../../components/core/Navbar";
-import FooterBlack from "../../components/core/FooterBlack"; // ProjectCard component
+import FooterBlack from "../../components/core/FooterBlack";
+import PageTitles from "../../components/core/PageTitles"; // ProjectCard component
 
 const Project = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -29,19 +30,6 @@ const Project = () => {
     }, [scrollPosition]);
 
     return (
-        /*<div className={'bg-black'}>
-            <HomeTitles title={'Project'} number={2} reverse={true} dark={true} />
-
-            {/!* Background section for project details *!/}
-            <div style={backgroundStyle} className="relative text-white">
-                <div className="container mx-auto px-4 sm:px-8 py-16">
-                    {/!* Iterate through projects *!/}
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} project={project} index={index} />
-                    ))}
-                </div>
-            </div>
-        </div>*/
         <>
             <div
                 className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
@@ -50,7 +38,7 @@ const Project = () => {
 
             <div className={'bg-black pt-16'}>
 
-                <HomeTitles title={'Project'} number={2} reverse={true} dark={true}/>
+                <PageTitles c bgtitle={'WHAT WE DID'} title={'OUR PROJECT'} />
 
                 {/* Swiper for vertical scrolling */}
                 <Swiper

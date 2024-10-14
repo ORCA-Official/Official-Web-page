@@ -15,37 +15,6 @@ import {Mousewheel, Pagination} from 'swiper/modules';
 import {projectDetails} from "../../utils/projectDetails";
 
 const Project = () => {
- /*   const backgroundStyle = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.90)), url(${projectDetails[0].backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '100vh',
-    };*/
-
-    // Example projects array
-   /* const projects = [
-        {
-            title: "CAR RENTAL SYSTEM",
-            stack: ["HTML", "CSS", "JavaScript", "Spring Boot", "JWT", "Bootstrap"],
-            description: "A car rental system built with HTML/CSS, JavaScript, and Bootstrap front-end for responsive " +
-                "design. The backend uses Spring Boot with JWT for secure authentication. Allows users to easily browse " +
-                "cars, view details, and manage bookings with admin handling car listings and bookings.",
-            githubLink: "https://github.com/your-car-rental-repo",
-            liveLink: "https://car-rental-live.com",
-            backgroundImage: require('../../assets/images/carbackground01.png'),
-        },
-        {
-            title: "CAR RENTAL SYSTEM 2",
-            stack: ["HTML", "CSS", "JavaScript", "Spring Boot", "JWT", "Bootstrap"],
-            description: "A modern blog platform using Next.js, Auth.js, MongoDB, and Firebase. Features real-time " +
-                "updates, secure JWT authentication, and a responsive UI with Tailwind CSS. Hosted on Google Cloud, " +
-                "integrated with Google APIs. Powered by Prisma ORM for efficient data management..",
-            githubLink: "https://github.com/your-car-rental-repo",
-            liveLink: "https://car-rental-live.com",
-            backgroundImage: require('../../assets/images/blogapp.png'),
-        },
-        // Add more projects if needed
-    ];*/
 
     return (
         <div className={'bg-black'}>
