@@ -1,11 +1,5 @@
 // ** React Imports
-import React, { useEffect, useRef, useState } from 'react';
-
-// ** GSAP Imports
-import gsap from 'gsap-trial';
-import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
-import { useGSAP } from '@gsap/react';
+import React, {useEffect, useRef, useState} from 'react';
 
 // ** Custom Imports
 import Hero from "../../components/home/HeroSection";
@@ -21,10 +15,6 @@ import '../../assets/css/scroller.css';
 // ** WhatsApp Chat Button Imports
 import whatsappIcon from "../../assets/images/whatsapp.png";
 
-
-// ** GSAP Configs
-gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
-gsap.config({ trialWarn: false });
 
 const Home = () => {
     const main = useRef();
@@ -58,30 +48,31 @@ const Home = () => {
     return (
         <>
             {/* Navbar with dynamic visibility */}
-            <div className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
-                <Navbar />
+            <div
+                className={`fixed top-0 left-0 px-10 w-full z-50 transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-[120%]'}`}>
+                <Navbar/>
             </div>
 
             {/* Smooth scrolling content */}
             <div id="smooth-wrapper" ref={main}>
                 <div id="smooth-content">
                     <div className="box box-a gradient-blue" data-speed="0.5">
-                        <Hero />
+                        <Hero/>
                     </div>
                     <div className="box box-b gradient-orange" data-speed="0.8">
-                        <About />
+                        <About/>
                     </div>
                     <div className="box box-c gradient-purple" data-speed="0.8">
-                        <OurService />
+                        <OurService/>
                     </div>
                     <div className="box box-d gradient-purple" data-speed="0.8">
-                        <Project />
+                        <Project/>
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
                         {/*<Testimonial />*/}
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
-                        <FooterBlack />
+                        <FooterBlack/>
                     </div>
                 </div>
             </div>
@@ -105,7 +96,7 @@ const Home = () => {
                     zIndex: 1000
                 }}
             >
-                <img src={whatsappIcon} alt="WhatsApp" style={{ width: '40px', height: '40px' }} />
+                <img src={whatsappIcon} alt="WhatsApp" style={{width: '40px', height: '40px'}}/>
             </button>
         </>
     );
