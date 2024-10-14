@@ -9,7 +9,7 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         Lato: ['Lato', 'sans-serif'],
         poppins: ['Poppins", sans-serif'],
-        kumar: ['"Kumar One"', 'sans-serif']
+        kumar: ['Kumar One', 'sans-serif']
       }
     },
   },
