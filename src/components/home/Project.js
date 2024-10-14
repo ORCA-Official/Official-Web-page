@@ -33,6 +33,9 @@ const Project = () => {
                     invert: false, // Invert the scroll direction
                     sensitivity: 0, // Adjust sensitivity of the scroll
                 }}
+                touchRatio={1} // Control the sensitivity of touch scroll (higher values make it more responsive)
+                touchStartPreventDefault={false} // Allow smooth scroll with touch input
+                touchReleaseOnEdges={true} // Enable releasing on edges for better scroll experience
                 modules={[Pagination, Mousewheel]}
                 className="mySwiper"
                 style={{height: '100vh','--swiper-pagination-color': '#fff','--swiper-pagination-bullet-inactive-color': '#dadada'}}
