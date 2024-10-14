@@ -5,7 +5,7 @@ import {Mousewheel, Pagination} from "swiper/modules";
 import {projectDetails} from "../../utils/projectDetails";
 import Navbar from "../../components/core/Navbar";
 import FooterBlack from "../../components/core/FooterBlack";
-import PageTitles from "../../components/core/PageTitles"; // ProjectCard component.
+import PageTitles from "../../components/core/PageTitles"; // ProjectCard component
 
 const Project = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
