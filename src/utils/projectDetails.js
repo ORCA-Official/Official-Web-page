@@ -48,12 +48,12 @@ export const projectDetails = [
 
     {
         title: "COINZEN - Finance Tracker",
-        stack: ["React Native", "Expo", "JavaScript", "NativeWind", "Firebase"],
+        stack: ["React Native", "Expo", "JavaScript", "Nativeind", "Firebase"],
         description: "COINZEN is a comprehensive finance tracking app built with React Native and Expo. It helps users" +
             " track expenses, set monthly budgets, and view categorized expense reports. The app features seamless " +
             "Firebase integration for real-time data synchronization, secure user authentication, and a responsive UI" +
             " with NativeWind for styling. Integrated with Google APIs for enhanced functionality.",
-        githubLink: "https://github.com/your-coinzen-repo",
+        githubLink: "https://github.com/a",
         liveLink: "https://coinzen-live.com/",
         backgroundImage: require('../assets/images/coin.png'),
         links:false
