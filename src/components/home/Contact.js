@@ -41,7 +41,7 @@ const Contact = () => {
                 className="relative text-center bg-black pb-20 text-white min-h-screen flex flex-col items-center justify-center">
 
                 {/* Contact Options */}
-                <div className="relative z-10 mt-8 grid grid-cols-1 gap-8 md:grid-cols-3 justify-center">
+                <div className="relative z-10 mt-8 flex flex-wrap gap-20 px-10 justify-center">
                     {/* Chat Now Card */}
                     <div
                         className="bg-black border border-gray-700 p-12 rounded-xl shadow-[0_0_15px_5px_rgba(255,255,255,0.2)] hover:shadow-[0_0_20px_8px_rgba(255,255,255,0.5)] transition-all transform hover:-translate-y-4 w-80">
