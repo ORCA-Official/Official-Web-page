@@ -78,8 +78,15 @@ const Navbar = () => {
                 <li className="hover:text-black cursor-pointer"><Link to="/project">Projects</Link></li>
                 {/*<li className="hover:text-black cursor-pointer">Career</li>*/}
                 <li className="hover:text-black cursor-pointer"><Link to="/contact">Contacts</Link></li>
-                <button className="px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800">
-                    Contact Us
+                <button
+                    onClick={() => {
+                        const subjectPart = "Inquiry";
+                        const autoSetPart = "Some additional info";
+                        const email = 'orcaofficialse@gmail.com';
+                        window.location.href = `mailto:${email}?subject=${encodeURIComponent(subjectPart + " - " + autoSetPart)}`;
+                    }}
+                    className="px-4 py-2 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800">
+                    Email Us
                 </button>
             </ul>
         </motion.nav>
