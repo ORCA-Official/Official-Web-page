@@ -10,7 +10,7 @@ const Testimonial = () => {
         className: "center",
         centerMode: true,
         infinite: true,
-        centerPadding: "10px",
+        centerPadding: "30px",
         slidesToShow: 3,
         slidesToScroll: 0.1,
         speed: 500,

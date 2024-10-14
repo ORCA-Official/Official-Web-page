@@ -12,7 +12,6 @@ import Hero from "../../components/home/HeroSection";
 import OurService from "../../components/home/OurService";
 import About from "../../components/home/About";
 import Project from "../../components/home/Project";
-import Testimonial from "../../components/home/Testimonial";
 import FooterBlack from "../../components/core/FooterBlack";
 import Navbar from "../../components/core/Navbar";
 
@@ -79,13 +78,11 @@ const Home = () => {
                         <Project />
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
-                        <Testimonial />
+                        {/*<Testimonial />*/}
                     </div>
                     <div className="box box-e gradient-purple" data-speed="0.8">
                         <FooterBlack />
                     </div>
-
-                    <div className="line"></div>
                 </div>
             </div>
 

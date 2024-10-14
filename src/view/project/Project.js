@@ -55,7 +55,7 @@ const Project = () => {
                     }}
                     modules={[Pagination, Mousewheel]}
                     className="mySwiper"
-                    style={{height: '100vh'}} // Ensure it takes full height
+                    style={{height: '100vh','--swiper-pagination-color': '#fff','--swiper-pagination-bullet-inactive-color': '#dadada'}}
                 >
                     {/* Iterate through projects */}
                     {projectDetails.map((project, index) => (
