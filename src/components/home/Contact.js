@@ -23,6 +23,14 @@ const Contact = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [scrollPosition]);
+
+    const handleWhatsAppClickContact = () => {
+        const phoneNumber = "+94787491942"; // Replace with your WhatsApp number
+        const message = "Hello! I would like to inquire about your services."; // Pre-filled message
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+    };
+
     return (
         <div className={'bg-black'}>
             {/* <PageTitles bgtitle={'Get In Touch'} title={'Contact Us'}  dark={false}/>*/}
@@ -52,7 +60,8 @@ const Contact = () => {
 
                         {/* Button */}
                         <button
-                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
+                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition"
+                            onClick={handleWhatsAppClickContact}>
                             Start Chat
                         </button>
 
@@ -69,7 +78,14 @@ const Contact = () => {
                         <h3 className="text-2xl font-semibold mb-4">Email Us</h3>
                         {/* Button */}
                         <button
-                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
+                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition"
+                            onClick={() => {
+                                const subjectPart = "Inquiry";
+                                const autoSetPart = "Some additional info";
+                                const email = 'orcaofficialse@gmail.com';
+                                window.location.href = `mailto:${email}?subject=${encodeURIComponent(subjectPart + " - " + autoSetPart)}`;
+                            }}
+                        >
                             Send Email
                         </button>
                         <p className="text-gray-400 mb-6 mt-8">Get A Response Soon! Reach Us Anytime!</p>
@@ -86,7 +102,9 @@ const Contact = () => {
 
                         {/* Button */}
                         <button
-                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition">
+                            className="bg-white text-black font-medium py-2 px-4 rounded hover:bg-gray-300 transition"
+                            onClick={() => window.location.href = 'tel:+94787491942'}
+                        >
                             Make a Call
                         </button>
 
