@@ -8,7 +8,7 @@ import Contact from "./components/home/Contact";
 import Loader from "./components/core/Loader";
 import VisitorCounter from './components/core/VisitorCounter'; // Import the VisitorCounter
 
-const TRACKING_ID = "G-7PL9W7VWMM"; // Replace with your actual tracking ID
+const TRACKING_ID = "G-1TCX62QTRC"; // Replace with your actual tracking ID
 ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
