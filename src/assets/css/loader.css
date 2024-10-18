@@ -1,16 +1,8 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     background-color: #ffffff;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .loader-container {
@@ -21,6 +13,23 @@ code {
     background-color: #1a1a1a;
 }
 
+.loader-svg {
+    width: 30vw; /* Adjust default width for laptops */
+    height: auto;
+    max-width: 280px; /* Ensure it's well-proportioned on laptops */
+    min-width: 180px; /* Slightly bigger minimum size for laptops */
+}
+
+.loader-text {
+    font-size: 6vw; /* Smaller font size for laptops */
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+/* Animation styles */
 @keyframes drawLetter {
     0% {
         stroke-dashoffset: 220;
@@ -47,4 +56,47 @@ code {
 
 .animate-draw-a {
     animation-delay: 0.5s;
+}
+
+/* Laptop-specific adjustments */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .loader-svg {
+        width: 25vw; /* Better scaling for laptop screens */
+    }
+
+    .loader-text {
+        font-size: 5vw; /* Adjust font size for better proportion on laptops */
+    }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .loader-svg {
+        width: 50vw;
+    }
+
+    .loader-text {
+        font-size: 9vw;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .loader-svg {
+        width: 60vw;
+    }
+
+    .loader-text {
+        font-size: 10vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .loader-svg {
+        width: 80vw;
+    }
+
+    .loader-text {
+        font-size: 12vw;
+    }
 }
