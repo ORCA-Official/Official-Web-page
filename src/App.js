@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga';
 import About from "./view/Home/About";
 import Home from "./view/Home/Home";
@@ -8,12 +8,12 @@ import Contact from "./components/home/Contact";
 import Loader from "./components/core/Loader";
 import VisitorCounter from './components/core/VisitorCounter'; // Import the VisitorCounter
 
-const TRACKING_ID = "G-MSS7E945B5"; // Replace with your tracking ID
+const TRACKING_ID = "G-MSS7E945B5"; // Replace with your actual tracking ID
 ReactGA.initialize(TRACKING_ID);
 
-function App() {
+const App = () => {
     const [loading, setLoading] = useState(true);
-    const location = useLocation();
+    const location = useLocation(); // Get the current location
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -24,16 +24,16 @@ function App() {
     }, []);
 
     useEffect(() => {
-        ReactGA.pageview(window.location.pathname + window.location.search);
-    }, [location]);
-
+        // Track page views
+        ReactGA.pageview(location.pathname + location.search);
+    }, [location]); // Add location as a dependency
 
     if (loading) {
         return <Loader />;
     }
 
     return (
-        <BrowserRouter>
+        <div>
             <VisitorCounter /> {/* Include VisitorCounter here */}
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -42,8 +42,14 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/*" element={<Home />} />
             </Routes>
-        </BrowserRouter>
+        </div>
     );
-}
+};
 
-export default App;
+const MainApp = () => (
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
+
+export default MainApp;
