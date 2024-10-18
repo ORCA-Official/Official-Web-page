@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes, useLocation} from 'react-router-dom';
 import ReactGA from 'react-ga';
 import About from "./view/Home/About";
 import Home from "./view/Home/Home";
@@ -13,6 +13,7 @@ ReactGA.initialize(TRACKING_ID);
 
 function App() {
     const [loading, setLoading] = useState(true);
+    const location = useLocation();
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -24,7 +25,8 @@ function App() {
 
     useEffect(() => {
         ReactGA.pageview(window.location.pathname + window.location.search);
-    }, []);
+    }, [location]);
+
 
     if (loading) {
         return <Loader />;
