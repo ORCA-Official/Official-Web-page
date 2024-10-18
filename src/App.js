@@ -24,7 +24,7 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        console.log("Current location object:", location); // Log the whole location object
+        //console.log("Current location object:", location); // Log the whole location object
         const fullPath = location.pathname + location.search;
         if (fullPath) {
             ReactGA.pageview(fullPath);
