@@ -24,7 +24,7 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        // Track page views
+        console.log("Tracking pageview:", location.pathname + location.search); // Log the path
         ReactGA.pageview(location.pathname + location.search);
     }, [location]); // Add location as a dependency
 
