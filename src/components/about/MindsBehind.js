@@ -2,15 +2,20 @@ import React from "react";
 import PageTitles from "../core/PageTitles";
 import TeamCard from "../core/TeamCard";
 import I from "../../assets/images/aboutBG.png";
-import img1 from "../../assets/images/people.jpg";
+import dushan from "../../assets/images/Dushan.png";
+import ishan from "../../assets/images/Ishan.png";
+import dilan from "../../assets/images/Dilan.png";
+import chathuska from "../../assets/images/Chathushka.png";
+import thinusha from "../../assets/images/Thinusha.png";
+import rusiru from "../../assets/images/Rusiru.png";
 
 const teamMembers = [
-    { img: img1, name: 'John Doe', details: 'Software Engineer' },
-    { img: img1, name: 'John Doe', details: 'Software Engineer' },
-    { img: img1, name: 'John Doe', details: 'Software Engineer' },
-    { img: img1, name: 'John Doe', details: 'Software Engineer' },
-    { img: img1, name: 'John Doe', details: 'Software Engineer' },
-    { img: img1, name: 'John Doe', details: 'Software Engineer' }
+    { img: ishan, name: 'Ishan Dhananjana', details: 'Software Engineer' },
+    { img: dushan, name: 'Dushan Malinda', details: 'Software Engineer' },
+    { img: dilan, name: 'Tharindu Dilan', details: 'Software Engineer' },
+    { img: chathuska, name: 'Chathushka Madumal', details: 'Software Engineer' },
+    { img: thinusha, name: 'Thinusha Supun Dilhara ', details: 'Software Engineer' },
+    { img: rusiru, name: 'Rusiru H. Dasanayaka', details: 'Software Engineer' }
     // You can add more team members here
 ];
 
