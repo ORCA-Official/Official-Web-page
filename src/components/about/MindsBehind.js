@@ -14,7 +14,7 @@ const teamMembers = [
     { img: dushan, name: 'Dushan Malinda', details: 'Software Engineer' },
     { img: dilan, name: 'Tharindu Dilan', details: 'Software Engineer' },
     { img: chathuska, name: 'Chathushka Madumal', details: 'Software Engineer' },
-    { img: thinusha, name: 'Thinusha Supun Dilhara ', details: 'Software Engineer' },
+    { img: thinusha, name: 'Thinusha  Dilhara ', details: 'Software Engineer' },
     { img: rusiru, name: 'Rusiru H. Dasanayaka', details: 'Software Engineer' }
     // You can add more team members here
 ];

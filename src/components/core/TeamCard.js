@@ -12,7 +12,7 @@ const TeamCard = ({ img, name, details }) => {
     };
 
     return (
-        <div className={'min-w-56 h-72 flex flex-col justify-between pb-6 rounded-md'} style={backgroundStyle}>
+        <div className={'w-80 h-72 flex flex-col justify-between pb-6 rounded-md'} style={backgroundStyle}>
             <div className="flex-grow"></div>
             <div>
                 <h3 className="text-center mt-3 text-3xl font-bold text-white">{name}</h3>
