@@ -14,7 +14,7 @@ const VisitorCounter = () => {
     }, []);
 
     return (
-        <div>
+        <div className={'hidden'}>
             <h2>Visitor Count: {visitorCount}</h2>
         </div>
     );
