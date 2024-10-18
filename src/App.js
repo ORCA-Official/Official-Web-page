@@ -24,9 +24,15 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        console.log("Tracking pageview:", location.pathname + location.search); // Log the path
-        ReactGA.pageview(location.pathname + location.search);
-    }, [location]); // Add location as a dependency
+        console.log("Current location object:", location); // Log the whole location object
+        const fullPath = location.pathname + location.search;
+        if (fullPath) {
+            ReactGA.pageview(fullPath);
+        } else {
+            console.log("Empty path detected");
+        }
+    }, [location]);
+
 
     if (loading) {
         return <Loader />;
