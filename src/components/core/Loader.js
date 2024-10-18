@@ -4,7 +4,7 @@ import '../../assets/css/loader.css';
 const Loader: React.FC = () => {
     return (
         <div className="loader-container">
-            <svg width="200" height="100" viewBox="0 0 200 100">
+            <svg className="loader-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <filter id="glow">
                         <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
@@ -14,9 +14,9 @@ const Loader: React.FC = () => {
                         </feMerge>
                     </filter>
                 </defs>
-                <text x="10" y="80" fontSize="80" fontWeight="bold" fill="none" stroke="#ffffff" strokeWidth="2" filter="url(#glow)">
+                <text x="50%" y="80" textAnchor="middle" className="loader-text" filter="url(#glow)">
                     <tspan className="animate-draw-o">O</tspan>
-                    <tspan x="75" className="animate-draw-a">A</tspan>
+                    <tspan className="animate-draw-a">A</tspan>
                 </text>
             </svg>
         </div>
