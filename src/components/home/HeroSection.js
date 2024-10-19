@@ -15,6 +15,7 @@ import {motion} from 'framer-motion';
 
 // ** React Icons Import
 import {BsArrowUpRight} from "react-icons/bs";
+import {Link} from "react-router-dom";
 
 const HeroSection = () => {
 
@@ -114,12 +115,19 @@ const HeroSection = () => {
                         </div>
                         <div className={'flex h-max justify-end'}>
                             <button
-                                className="mr-6 px-6 py-2 border border-white text-white rounded-md">
+                                className="mr-6 px-6 py-2 border border-white text-white rounded-md"
+                                onClick={() => {
+                                    const subjectPart = "Inquiry";
+                                    const autoSetPart = "Start Your Project";
+                                    const email = 'orcaofficialse@gmail.com';
+                                    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subjectPart + " - " + autoSetPart)}`;
+                                }}
+                            >
                                 Start Your Project
                             </button>
                             <button
                                 className={'w-max flex items-center gap-x-2 py-2 border-b border-b-white text-white'}>
-                                <span>Explore Our Services</span>
+                                <span><Link to="/about">Explore Our Services</Link></span>
                                 <BsArrowUpRight size={14}/>
                             </button>
                         </div>
