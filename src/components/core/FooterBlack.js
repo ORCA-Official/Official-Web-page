@@ -46,11 +46,26 @@ const FooterBlack = () => {
                         <span className={'bg-white text-black p-2 cursor-pointer'}>Subscribe</span>
                     </div>
                 </div>
-                <div className={'lg:order-none order-5 flex xl:flex-col xl:justify-between justify-center xl:pb-10 pb-4 xl:gap-x-0 gap-x-4 xl:w-auto w-full'}>
-                    <FaLinkedinIn className={'text-gray-200 cursor-pointer'}/>
-                    <FaGithub className={'text-gray-200 cursor-pointer'}/>
-                    <FaFacebook className={'text-gray-200 cursor-pointer'}/>
-                    <FaWhatsapp className={'text-gray-200 cursor-pointer'}/>
+                <div
+                    className={'lg:order-none order-5 flex xl:flex-col xl:justify-between justify-center xl:pb-10 pb-4 xl:gap-x-0 gap-x-4 xl:w-auto w-full'}>
+
+                    <a href="https://www.linkedin.com/in/orca-se-9837ab285/" target="_blank"
+                       rel="noopener noreferrer">
+                        <FaLinkedinIn className={'text-gray-200 cursor-pointer'}/>
+                    </a>
+                    <a href="https://github.com/ORCA-Official" target="_blank"
+                       rel="noopener noreferrer">
+                        <FaGithub className={'text-gray-200 cursor-pointer'}/>
+                    </a>
+                    <a href="https://web.facebook.com/people/Orca-SE/100095497564987/" target="_blank"
+                       rel="noopener noreferrer">
+                        <FaFacebook className="text-gray-200 cursor-pointer"/>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B94787491942&text=Hello%21+I+would+like+to+inquire+about+your+services.&type=phone_number&app_absent=0" target="_blank"
+                       rel="noopener noreferrer">
+                        <FaWhatsapp className={'text-gray-200 cursor-pointer'}/>
+                    </a>
+
                 </div>
             </div>
             <p className={'text-xs text-center'}>© 2024 Orca Tech Solutions. All Rights Reserved.</p>
