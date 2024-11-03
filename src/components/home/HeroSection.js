@@ -6,8 +6,8 @@ import React, {useEffect, useState} from 'react';
 //import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 // ** Assets Imports
-import videoUrl from "../../assets/video/bg.mp4";
-import logo from '../../assets/images/oa.png'
+import images from "../../assets/images/background.png";
+import logo from '../../assets/images/FORTESEI.png'
 import '../../assets/css/hero-styles.css'
 
 // ** Frame Motion Imports
@@ -34,25 +34,39 @@ const HeroSection = () => {
         }
     }, []);
 
+    const startingLetterVariant = {
+        hidden: { opacity: 0, scale: 0.5, rotate: -20 },
+        visible: { opacity: 1, scale: 1, rotate: 0 }
+    };
+
+    const remainingLettersVariant = {
+        hidden: { opacity: 0, x: -15 },
+        visible: { opacity: 1, x: 0 }
+    };
     return (
         <div className={'relative'}>
             <div className="relative h-screen w-full bg-black">
                 <div className="absolute inset-0">
-                    <video
+                    <img
+                        src={images}
+                        alt="Background Image"
+                        className="w-full h-full object-cover opacity-50"
+                    />
+                    {/*<video
                         src={videoUrl}
                         title="Video"
                         className="w-full object-cover h-full opacity-25"
                         autoPlay
                         loop
                         muted
-                    ></video>
+                    ></video>*/}
                 </div>
 
                 <div
                     className="relative flex flex-col items-center h-full justify-center text-center text-white space-y-4">
 
 
-                    <motion.div className={'md:text-[8vw] text-[12vw] font-light text-center flex justify-between'}
+                    {/* <motion.div className={'md:text-[8vw] text-[12vw] font-light text-center flex justify-between'}
                                 initial={{width: 'max-content'}}
                                 animate={{width: '100vw', paddingInline: paddingCount}}
                                 transition={{duration: 0.5, delay: 1}}
@@ -94,10 +108,81 @@ const HeroSection = () => {
                               transition={{duration: 1, delay:1.3}}
                     >
                         Building Digital Solutions for the Future.
-                    </motion.p>
+                    </motion.p>*/}
+                    {/*RELIABILITY STRENGTH Add*/}
+                    <div>
+                        {/*<div className="flex flex-col" style={{ padding: paddingCount }}>
+                            <div className="text-white text-[8vw] md:text-[8vw] font-light absolute ">
+                                RELIABILITY
+                            </div>
+                            <div className="text-white text-[8vw] md:text-[8vw] ml-[28vw] font-light mt-[20vw] md:mt-[8vw]">
+                                STRENGTH
+                            </div>
+                            <div className="text-gray-300 text-sm md:text-base font-light mt-4">
+                                BUILDING DIGITAL SOLUTIONS FOR THE FUTURE
+                            </div>
+                        </div>*/}
+                        <div className="flex flex-col" style={{padding: paddingCount}}>
+                            {/* "R" and "ELIABILITY" */}
+                            <div className="text-white text-[8vw] md:text-[8vw] font-light absolute">
+                                <motion.span
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{delay: 0.2, duration: 0.6, ease: "easeOut"}}
+                                    variants={startingLetterVariant}
+                                >
+                                    R
+                                </motion.span>
+                                <motion.span
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{delay: 0.8, duration: 0.8, ease: "easeInOut"}}
+                                    variants={remainingLettersVariant}
+                                >
+                                    ELIABILITY
+                                </motion.span>
+                            </div>
+
+                            {/* "S" and "TRENGTH" */}
+                            <div
+                                className="text-white text-[8vw] md:text-[8vw] ml-[28vw] font-light mt-[20vw] md:mt-[8vw]">
+                                <motion.span
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{delay: 0.2, duration: 0.6, ease: "easeOut"}}
+                                    variants={startingLetterVariant}
+                                >
+                                    S
+                                </motion.span>
+                                <motion.span
+                                    initial="hidden"
+                                    animate="visible"
+                                    transition={{delay: 0.8, duration: 0.8, ease: "easeInOut"}}
+                                    variants={remainingLettersVariant}
+                                >
+                                    TRENGTH
+                                </motion.span>
+                            </div>
+
+                            {/* Tagline */}
+                            <motion.div
+                                className="text-gray-300 text-sm md:text-base font-light mt-4"
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                transition={{delay: 1.5, duration: 1}}
+                            >
+                                BUILDING DIGITAL SOLUTIONS FOR THE FUTURE
+                            </motion.div>
+                        </div>
+                        {/*<p className={'font-montserrat lg:text-xl md:text-lg text-xs font-extralight'}>
+                            Building Digital Solutions for the Future.
+                        </p>*/}
+                    </div>
+
 
                     <div className={'md:hidden flex h-max justify-end'}>
-                        <button className={'md:text-lg text-xs mr-6 md:px-6 md:py-2 px-2 py-1 border border-white text-white md:rounded-md rounded-sm'}>
+                        <button
+                            className={'md:text-lg text-xs mr-6 md:px-6 md:py-2 px-2 py-1 border border-white text-white md:rounded-md rounded-sm'}>
                             Start Your Project
                         </button>
                         <button

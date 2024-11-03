@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import '../../assets/css/NavBar.css';
 
 // ** Assets Imports
-import oa_dark from '../../assets/images/oa_dark.png'
+import oa_dark from '../../assets/images/FORTESEI.png'
 
 // ** Icon Imports
 import { CiMenuBurger } from "react-icons/ci";
