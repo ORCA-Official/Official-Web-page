@@ -47,6 +47,7 @@ const HeroSection = () => {
         <div className={'relative'}>
             <div className="relative h-screen w-full bg-black">
                 <div className="absolute inset-0">
+                    {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                     <img
                         src={images}
                         alt="Background Image"
